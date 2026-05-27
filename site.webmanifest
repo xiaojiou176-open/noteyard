@@ -1,0 +1,22 @@
+{
+  "name": "Noteyard",
+  "short_name": "Noteyard",
+  "description": "Copy-first Apple Notes recovery and review toolkit for macOS.",
+  "start_url": "/noteyard/",
+  "scope": "/noteyard/",
+  "display": "standalone",
+  "background_color": "#f5f1e8",
+  "theme_color": "#16212b",
+  "icons": [
+    {
+      "src": "assets/brand/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/brand/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

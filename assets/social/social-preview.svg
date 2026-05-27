@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">Noteyard social preview source</title>
+  <desc id="desc">A social preview source image for a copy-first Apple Notes recovery and review workflow with bounded AI review, evidence-backed case Q&amp;A, and a local MCP surface for Codex and Claude Code.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbf7f0"/>
+      <stop offset="55%" stop-color="#f5f1e8"/>
+      <stop offset="100%" stop-color="#ece4d7"/>
+    </linearGradient>
+    <radialGradient id="glowBlue" cx="0%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="rgba(16,86,109,0.22)"/>
+      <stop offset="100%" stop-color="rgba(16,86,109,0)"/>
+    </radialGradient>
+    <radialGradient id="glowWarm" cx="100%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="rgba(138,77,32,0.18)"/>
+      <stop offset="100%" stop-color="rgba(138,77,32,0)"/>
+    </radialGradient>
+    <linearGradient id="command" x1="0%" x2="0%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#101821"/>
+      <stop offset="100%" stop-color="#182433"/>
+    </linearGradient>
+    <linearGradient id="tealLine" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" stop-color="#10566d"/>
+      <stop offset="100%" stop-color="rgba(16,86,109,0.15)"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <circle cx="72" cy="72" r="220" fill="url(#glowBlue)"/>
+  <circle cx="1190" cy="92" r="180" fill="url(#glowWarm)"/>
+
+  <rect x="40" y="36" width="1200" height="568" rx="34" fill="rgba(252,250,246,0.86)" stroke="rgba(22,33,43,0.08)"/>
+
+  <rect x="70" y="58" width="1140" height="54" rx="27" fill="rgba(255,255,255,0.74)" stroke="rgba(22,33,43,0.10)"/>
+  <rect x="92" y="68" width="36" height="36" rx="10" fill="#ffffff" stroke="rgba(22,33,43,0.08)"/>
+  <text x="148" y="84" fill="#16212b" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="19" font-weight="700">Noteyard</text>
+  <text x="148" y="103" fill="#5d6774" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="13">Repository identity: noteyard</text>
+
+  <rect x="882" y="69" width="104" height="30" rx="15" fill="#ffffff" stroke="rgba(22,33,43,0.10)"/>
+  <text x="904" y="88" fill="#16212b" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="13">GitHub repo</text>
+  <rect x="995" y="69" width="82" height="30" rx="15" fill="#ffffff" stroke="rgba(22,33,43,0.10)"/>
+  <text x="1018" y="88" fill="#16212b" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="13">Releases</text>
+  <rect x="1086" y="69" width="94" height="30" rx="15" fill="#10566d"/>
+  <text x="1108" y="88" fill="#fefcf7" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="13" font-weight="700">Public proof</text>
+
+  <rect x="74" y="136" width="660" height="432" rx="28" fill="rgba(255,255,255,0.55)" stroke="rgba(22,33,43,0.08)"/>
+  <rect x="96" y="160" width="410" height="32" rx="16" fill="rgba(16,86,109,0.10)"/>
+  <text x="115" y="181" fill="#0b4255" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.6">COPY-FIRST RECOVERY · OPERATOR-FIRST PROOF · BUILDER LANE SECOND</text>
+
+  <text x="96" y="246" fill="#16212b" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="52" font-weight="700">Prove the copied-evidence</text>
+  <text x="96" y="298" fill="#16212b" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="52" font-weight="700">workflow before a real case.</text>
+
+  <text x="96" y="350" fill="#5d6774" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="22">Copy-first Apple Notes recovery with bounded AI review,</text>
+  <text x="96" y="380" fill="#5d6774" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="22">evidence-backed case Q&amp;A, and local MCP for Codex + Claude Code.</text>
+
+  <rect x="96" y="414" width="176" height="38" rx="19" fill="#10566d"/>
+  <text x="118" y="438" fill="#fefcf7" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="15" font-weight="700">Follow the proof path</text>
+  <rect x="286" y="414" width="160" height="38" rx="19" fill="transparent" stroke="rgba(16,86,109,0.22)" stroke-width="2"/>
+  <text x="312" y="438" fill="#0b4255" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="15" font-weight="700">See public proof</text>
+
+  <rect x="96" y="480" width="148" height="34" rx="17" fill="rgba(255,255,255,0.74)" stroke="rgba(22,33,43,0.10)"/>
+  <text x="118" y="501" fill="#16212b" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="13">macOS only</text>
+  <rect x="254" y="480" width="162" height="34" rx="17" fill="rgba(255,255,255,0.74)" stroke="rgba(22,33,43,0.10)"/>
+  <text x="276" y="501" fill="#16212b" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="13">Zero-risk demo</text>
+  <rect x="426" y="480" width="262" height="34" rx="17" fill="rgba(255,255,255,0.74)" stroke="rgba(22,33,43,0.10)"/>
+  <text x="448" y="501" fill="#16212b" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="13">Evidence-backed case Q&amp;A</text>
+
+  <rect x="764" y="136" width="446" height="432" rx="28" fill="url(#command)" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="790" y="162" width="128" height="28" rx="14" fill="rgba(255,255,255,0.08)"/>
+  <text x="811" y="181" fill="#d8edf7" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.4">START IN 60 SECONDS</text>
+
+  <text x="790" y="238" fill="#f4f7fb" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="30" font-weight="700">4 operator-first steps</text>
+  <text x="790" y="272" fill="#f4f7fb" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="30" font-weight="700">in under 5 minutes</text>
+  <text x="790" y="312" fill="#b8c4d1" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="18">Think of this like a museum route. Each step earns the next one.</text>
+
+  <circle cx="810" cy="366" r="17" fill="rgba(255,255,255,0.12)"/>
+  <text x="804" y="372" fill="#fefcf7" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="14" font-weight="700">1</text>
+  <text x="842" y="360" fill="#f4f7fb" font-family="SF Mono, Menlo, monospace" font-size="18">notes-recovery demo</text>
+  <text x="842" y="386" fill="#b8c4d1" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="15">Safe case-root preview before any private evidence.</text>
+
+  <circle cx="810" cy="426" r="17" fill="rgba(255,255,255,0.12)"/>
+  <text x="804" y="432" fill="#fefcf7" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="14" font-weight="700">2</text>
+  <text x="842" y="420" fill="#f4f7fb" font-family="SF Mono, Menlo, monospace" font-size="18">ai-review --demo</text>
+  <text x="842" y="446" fill="#b8c4d1" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="15">Bounded AI review on derived artifacts only.</text>
+
+  <circle cx="810" cy="486" r="17" fill="rgba(255,255,255,0.12)"/>
+  <text x="804" y="492" fill="#fefcf7" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="14" font-weight="700">3</text>
+  <text x="842" y="480" fill="#f4f7fb" font-family="SF Mono, Menlo, monospace" font-size="15">ask-case --demo</text>
+  <text x="842" y="506" fill="#b8c4d1" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="15">Evidence-backed question path with uncertainty intact.</text>
+
+  <circle cx="810" cy="546" r="17" fill="rgba(255,255,255,0.12)"/>
+  <text x="804" y="552" fill="#fefcf7" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="14" font-weight="700">4</text>
+  <text x="842" y="540" fill="#f4f7fb" font-family="SF Mono, Menlo, monospace" font-size="18">doctor</text>
+  <text x="842" y="566" fill="#b8c4d1" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="15">Confirm the host boundary before a real copied-evidence run.</text>
+
+  <rect x="74" y="588" width="220" height="4" rx="2" fill="url(#tealLine)"/>
+  <text x="312" y="592" fill="#5d6774" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="15">Tracked source for GitHub social preview. Export a 1280x640 PNG before upload.</text>
+</svg>
