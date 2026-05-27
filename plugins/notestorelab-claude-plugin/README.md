@@ -29,7 +29,7 @@ itself can be added as a Claude Code marketplace.
 Example:
 
 ```bash
-claude plugin marketplace add xiaojiou176-open/apple-notes-forensics
+claude plugin marketplace add xiaojiou176-open/noteyard
 claude plugin install notestorelab-claude-plugin@notestorelab-plugins
 ```
 

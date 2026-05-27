@@ -34,13 +34,13 @@ LLMS_REQUIRED_TOKENS = (
 ROBOTS_REQUIRED_TOKENS = (
     "User-agent: *",
     "Allow: /",
-    "Sitemap: https://xiaojiou176-open.github.io/apple-notes-forensics/sitemap.xml",
+    "Sitemap: https://xiaojiou176-open.github.io/noteyard/sitemap.xml",
 )
 
 SITEMAP_REQUIRED_TOKENS = (
-    "https://xiaojiou176-open.github.io/apple-notes-forensics/",
-    "https://xiaojiou176-open.github.io/apple-notes-forensics/llms.txt",
-    "https://xiaojiou176-open.github.io/apple-notes-forensics/robots.txt",
+    "https://xiaojiou176-open.github.io/noteyard/",
+    "https://xiaojiou176-open.github.io/noteyard/llms.txt",
+    "https://xiaojiou176-open.github.io/noteyard/robots.txt",
 )
 
 ERROR_PAGE_REQUIRED_TOKENS = (
@@ -53,8 +53,8 @@ ERROR_PAGE_REQUIRED_TOKENS = (
 WEBMANIFEST_REQUIRED_TOKENS = (
     '"name": "NoteStore Lab"',
     '"short_name": "NoteStore Lab"',
-    '"start_url": "/apple-notes-forensics/"',
-    '"scope": "/apple-notes-forensics/"',
+    '"start_url": "/noteyard/"',
+    '"scope": "/noteyard/"',
     '"theme_color": "#16212b"',
     '"background_color": "#f5f1e8"',
     '"src": "assets/brand/icon-192.png"',

@@ -7,7 +7,7 @@ from pathlib import Path
 
 GLAMA_SCHEMA = "https://glama.ai/mcp/schemas/server.json"
 GLAMA_MAINTAINER = "xiaojiou176"
-IMAGE_BASE = "ghcr.io/xiaojiou176-open/apple-notes-forensics"
+IMAGE_BASE = "ghcr.io/xiaojiou176-open/noteyard"
 
 
 def collect_glama_surface_errors(repo_root: Path) -> list[str]:

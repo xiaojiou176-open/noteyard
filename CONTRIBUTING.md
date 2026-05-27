@@ -70,7 +70,7 @@ failing as "unsupported."
 If you need to inspect the payload locally before wiring a workflow change, run:
 
 ```bash
-python3 scripts/ci/submit_dependency_snapshot.py --repo xiaojiou176-open/apple-notes-forensics --dry-run
+python3 scripts/ci/submit_dependency_snapshot.py --repo xiaojiou176-open/noteyard --dry-run
 ```
 
 For a maintainer-side full-history secret scan beyond the default local hooks,
@@ -166,7 +166,7 @@ bundles locally:
 If you are touching `server.json` or the MCP Registry story, keep the package
 boundary honest: registry metadata alone is not an MCP Registry listing claim.
 The current repo contract still targets
-`apple-notes-forensics==0.1.0.post1` on the PyPI lane, but live package state
+`noteyard==0.1.0.post1` on the PyPI lane, but live package state
 can drift outside the repository. Keep the package name/version in
 `server.json` aligned with the current repo version, and refresh PyPI
 read-back before you repeat any live-package claim.
@@ -180,7 +180,7 @@ PyPI metadata/build-readiness smoke:
 Current PyPI install smoke:
 
 ```bash
-python -m pip install apple-notes-forensics==0.1.0.post1
+python -m pip install noteyard==0.1.0.post1
 ```
 
 Independent skill publish-readiness smoke:
@@ -530,7 +530,7 @@ Release-readiness audit:
 
 ```bash
 .venv/bin/python scripts/ci/check_release_readiness.py \
-  --repo xiaojiou176-open/apple-notes-forensics \
+  --repo xiaojiou176-open/noteyard \
   --strict
 ```
 
@@ -606,10 +606,10 @@ Lower-level release drills may still be useful:
   --ignore 'examples*' \
   --json-pp .runtime-cache/scancode/repo-scan.json \
   .
-gh api 'repos/xiaojiou176-open/apple-notes-forensics'
-gh api 'repos/xiaojiou176-open/apple-notes-forensics/branches/main/protection'
-gh api 'repos/xiaojiou176-open/apple-notes-forensics/secret-scanning/alerts?per_page=100'
-gh api 'repos/xiaojiou176-open/apple-notes-forensics/security-advisories?state=all'
+gh api 'repos/xiaojiou176-open/noteyard'
+gh api 'repos/xiaojiou176-open/noteyard/branches/main/protection'
+gh api 'repos/xiaojiou176-open/noteyard/secret-scanning/alerts?per_page=100'
+gh api 'repos/xiaojiou176-open/noteyard/security-advisories?state=all'
 ```
 
 ## Optional Surface Boundary

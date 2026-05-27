@@ -46,7 +46,7 @@ from notes_recovery.services.verify import verify_hits
 
 MCP_DEPENDENCY_HELP = (
     "The MCP server requires the optional MCP dependencies. "
-    "Install `python -m pip install 'apple-notes-forensics[mcp]'` "
+    "Install `python -m pip install 'noteyard[mcp]'` "
     "or `python -m pip install -e .[mcp]` first."
 )
 

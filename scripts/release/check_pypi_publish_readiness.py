@@ -105,7 +105,7 @@ def collect_publish_readiness_errors(repo_root: Path) -> list[str]:
     if not isinstance(repository, dict):
         errors.append("server.json is missing repository metadata")
     else:
-        if repository.get("url") != "https://github.com/xiaojiou176-open/apple-notes-forensics":
+        if repository.get("url") != "https://github.com/xiaojiou176-open/noteyard":
             errors.append("server.json repository.url must point at the canonical GitHub repository")
         if repository.get("source") != "github":
             errors.append("server.json repository.source must be github")

@@ -9,9 +9,9 @@ import tomllib
 from pathlib import Path
 
 
-REPO_URL = "https://github.com/xiaojiou176-open/apple-notes-forensics"
+REPO_URL = "https://github.com/xiaojiou176-open/noteyard"
 SERVER_NAME = "io.github.xiaojiou176-open/notestorelab-mcp"
-IMAGE_BASE = "ghcr.io/xiaojiou176-open/apple-notes-forensics"
+IMAGE_BASE = "ghcr.io/xiaojiou176-open/noteyard"
 
 
 def _run(args: list[str], *, cwd: Path) -> subprocess.CompletedProcess[str]:

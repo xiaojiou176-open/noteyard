@@ -102,7 +102,7 @@ RUNTIME_HYGIENE_TOKENS = (
 )
 
 README_TAG_RELEASE_URL = (
-    "https://github.com/xiaojiou176-open/apple-notes-forensics/releases/tag/"
+    "https://github.com/xiaojiou176-open/noteyard/releases/tag/"
 )
 
 PUBLIC_STORY_FORBIDDEN_CHANGELOG_TOKENS = (

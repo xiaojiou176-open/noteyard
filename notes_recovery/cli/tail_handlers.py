@@ -33,10 +33,10 @@ def handle_demo_command(
     run_ts = timestamp_now()
     setup_cli_logging(args, run_ts, None, "demo")
 
-    repo_url = "https://github.com/xiaojiou176-open/apple-notes-forensics"
-    release_url = "https://github.com/xiaojiou176-open/apple-notes-forensics/releases"
-    changelog_url = "https://github.com/xiaojiou176-open/apple-notes-forensics/blob/main/CHANGELOG.md"
-    support_url = "https://github.com/xiaojiou176-open/apple-notes-forensics/blob/main/SUPPORT.md"
+    repo_url = "https://github.com/xiaojiou176-open/noteyard"
+    release_url = "https://github.com/xiaojiou176-open/noteyard/releases"
+    changelog_url = "https://github.com/xiaojiou176-open/noteyard/blob/main/CHANGELOG.md"
+    support_url = "https://github.com/xiaojiou176-open/noteyard/blob/main/SUPPORT.md"
     case_tree_path = _demo_resource_path(repo_root, "sanitized-case-tree.txt")
     verify_path = _demo_resource_path(repo_root, "sanitized-verification-summary.txt")
     operator_path = _demo_resource_path(repo_root, "sanitized-operator-brief.md")

@@ -180,7 +180,7 @@ def test_evaluate_release_summary_treats_fully_merged_pr_history_as_notes() -> N
             "number": 1,
             "state": "MERGED",
             "title": "Merge governance closeout",
-            "url": "https://github.com/xiaojiou176-open/apple-notes-forensics/pull/1",
+            "url": "https://github.com/xiaojiou176-open/noteyard/pull/1",
         }
     ]
 
@@ -210,13 +210,13 @@ def test_evaluate_release_summary_ignores_reviewed_closed_unmerged_pull_requests
             "number": 3,
             "state": "CLOSED",
             "title": "ci(deps): submit dependency snapshots for review support",
-            "url": "https://github.com/xiaojiou176-open/apple-notes-forensics/pull/3",
+            "url": "https://github.com/xiaojiou176-open/noteyard/pull/3",
         },
         {
             "number": 9,
             "state": "CLOSED",
             "title": "fix: allow github-hosted squash merge identity",
-            "url": "https://github.com/xiaojiou176-open/apple-notes-forensics/pull/9",
+            "url": "https://github.com/xiaojiou176-open/noteyard/pull/9",
         },
     ]
 
@@ -246,7 +246,7 @@ def test_evaluate_release_summary_keeps_unknown_closed_unmerged_pull_requests_ma
             "number": 99,
             "state": "CLOSED",
             "title": "unknown closed pull request",
-            "url": "https://github.com/xiaojiou176-open/apple-notes-forensics/pull/99",
+            "url": "https://github.com/xiaojiou176-open/noteyard/pull/99",
         }
     ]
 

@@ -4,10 +4,10 @@
 
 ## Canonical URLs
 
-- Landing: https://xiaojiou176-open.github.io/apple-notes-forensics/
-- Repository: https://github.com/xiaojiou176-open/apple-notes-forensics
-- Releases: https://github.com/xiaojiou176-open/apple-notes-forensics/releases
-- PyPI: https://pypi.org/project/apple-notes-forensics/
+- Landing: https://xiaojiou176-open.github.io/noteyard/
+- Repository: https://github.com/xiaojiou176-open/noteyard
+- Releases: https://github.com/xiaojiou176-open/noteyard/releases
+- PyPI: https://pypi.org/project/noteyard/
 
 ## Start Here
 

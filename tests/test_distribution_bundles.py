@@ -17,9 +17,9 @@ def test_distribution_artifacts_exist() -> None:
     distribution_text = (repo_root / "DISTRIBUTION.md").read_text(encoding="utf-8")
 
     assert server_payload["name"] == "io.github.xiaojiou176-open/notestorelab-mcp"
-    assert server_payload["repository"]["url"] == "https://github.com/xiaojiou176-open/apple-notes-forensics"
+    assert server_payload["repository"]["url"] == "https://github.com/xiaojiou176-open/noteyard"
     assert server_payload["repository"]["source"] == "github"
-    assert server_payload["packages"][0]["identifier"] == "apple-notes-forensics"
+    assert server_payload["packages"][0]["identifier"] == "noteyard"
     assert marketplace_payload["name"] == "notestorelab-plugins"
     assert marketplace_payload["owner"]["email"].endswith("@users.noreply.github.com")
     assert marketplace_payload["plugins"][0]["name"] == "notestorelab-claude-plugin"

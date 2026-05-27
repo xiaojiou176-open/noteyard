@@ -1,8 +1,8 @@
 name: notestorelab-case-review
 description: Guide one bounded NoteStore Lab case review without turning the repo into a hosted platform.
 version: 0.1.0.post1
-homepage: https://github.com/xiaojiou176-open/apple-notes-forensics
-repository: https://github.com/xiaojiou176-open/apple-notes-forensics
+homepage: https://github.com/xiaojiou176-open/noteyard
+repository: https://github.com/xiaojiou176-open/noteyard
 license: MIT
 entrypoint: ./SKILL.md
 capabilities:
