@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "noteyard": {
+      "command": "notes-recovery-mcp",
+      "args": [
+        "--cases-root",
+        "./output"
+      ]
+    }
+  }
+}

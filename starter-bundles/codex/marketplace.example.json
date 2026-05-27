@@ -1,0 +1,17 @@
+{
+  "name": "noteyard-starters",
+  "interface": {
+    "displayName": "Noteyard Local Plugins"
+  },
+  "marketplaces": [
+    {
+      "name": "noteyard-local",
+      "plugins": [
+        {
+          "name": "noteyard",
+          "path": "plugins/noteyard"
+        }
+      ]
+    }
+  ]
+}

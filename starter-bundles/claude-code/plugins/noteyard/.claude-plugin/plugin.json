@@ -1,0 +1,13 @@
+{
+  "name": "noteyard",
+  "version": "0.1.0",
+  "description": "Marketplace-ready starter plugin for the local Noteyard MCP workflow on copied-evidence case roots.",
+  "author": {
+    "name": "Noteyard",
+    "email": "support@noteyard.local"
+  },
+  "mcp_config": ".mcp.json",
+  "skills": [
+    "skills/noteyard-mcp/SKILL.md"
+  ]
+}

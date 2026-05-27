@@ -1,0 +1,12 @@
+{
+  "name": "noteyard-starters",
+  "owner": {
+    "name": "Noteyard"
+  },
+  "plugins": [
+    {
+      "name": "noteyard",
+      "source": "plugins/noteyard"
+    }
+  ]
+}

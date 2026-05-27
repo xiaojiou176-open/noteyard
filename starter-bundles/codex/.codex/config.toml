@@ -1,0 +1,9 @@
+[mcp_servers.noteyard]
+command = "../.venv/bin/python"
+args = [
+  "-m",
+  "notes_recovery.mcp.server",
+  "--case-dir",
+  "./output/Notes_Forensics_<run_ts>",
+]
+cwd = ".."
