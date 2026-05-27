@@ -1,0 +1,17 @@
+[
+  {
+    "artifact": "sanitized-verification-summary.txt",
+    "priority": 1,
+    "reason": "Fastest synthetic hit-oriented signal."
+  },
+  {
+    "artifact": "sanitized-operator-brief.md",
+    "priority": 2,
+    "reason": "Explains the copy-first workflow and sharing boundary."
+  },
+  {
+    "artifact": "sanitized-case-tree.txt",
+    "priority": 3,
+    "reason": "Shows the workflow shape and where review artifacts live."
+  }
+]

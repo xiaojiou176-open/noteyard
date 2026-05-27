@@ -1,0 +1,19 @@
+Verification summary
+====================
+
+Case ID: NSL-20260325-010501
+Mode: synthetic public demo fixture
+
+Checks
+------
+[PASS] Case root created and manifests written
+[PASS] Snapshot hashes exported
+[PASS] Verification summary generated
+[PASS] Public demo values contain no live-user identifiers
+[PASS] Recovery outputs grouped under one reviewable root
+[WARN] Sample keyword hits are illustrative only
+
+Takeaway
+--------
+This fixture exists to show the shape of a reviewable case workflow.
+It is not evidence from a real user incident.

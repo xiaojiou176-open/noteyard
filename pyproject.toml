@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=82.0.1", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "noteyard"
+version = "0.1.0.post1"
+description = "Copy-first Apple Notes recovery toolkit for macOS, with reviewable case outputs, AI-assisted review, verification, and public-safe demo artifacts."
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["apple-notes", "digital-forensics", "data-recovery", "incident-response", "macos"]
+dependencies = []
+
+[project.optional-dependencies]
+ai = ["httpx>=0.28.1"]
+mcp = ["mcp>=1.26.0,<2"]
+dashboard = ["streamlit>=1.55.0", "plotly", "pandas", "networkx"]
+carve = ["lz4", "pyliblzfse"]
+protobuf = []
+dev = ["pytest", "pre-commit", "setuptools>=82.0.1", "build", "twine"]
+
+[project.urls]
+Documentation = "https://github.com/xiaojiou176-open/noteyard"
+Releases = "https://github.com/xiaojiou176-open/noteyard/releases"
+Support = "https://github.com/xiaojiou176-open/noteyard/blob/main/SUPPORT.md"
+Issues = "https://github.com/xiaojiou176-open/noteyard/issues"
+
+[project.scripts]
+notes-recovery = "notes_recovery.cli.main:main"
+notes-recovery-mcp = "notes_recovery.mcp.server:main"
+forensics-dashboard = "notes_recovery.apps.dashboard:main"
+
+[tool.setuptools.packages.find]
+include = ["notes_recovery*"]
+
+[tool.setuptools.package-data]
+notes_recovery = ["resources/demo/*"]

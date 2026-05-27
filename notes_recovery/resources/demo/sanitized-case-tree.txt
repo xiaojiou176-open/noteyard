@@ -1,0 +1,23 @@
+Notes_Forensics_2026-03-25_010501/
+├── DB_Backup/
+│   ├── NoteStore.sqlite
+│   ├── NoteStore.sqlite-wal
+│   └── snapshot_hashes_2026-03-25_010501.csv
+├── Cache_Backup/
+│   └── note_preview_cache.json
+├── Recovered_DB/
+│   ├── recovered_notes.csv
+│   └── orphan_fragments.csv
+├── Recovered_Blobs/
+│   ├── blob_index.csv
+│   └── extracted_payloads/
+├── Verification/
+│   ├── verification_summary.txt
+│   ├── keyword_hits.csv
+│   └── timeline_summary.json
+├── Reports/
+│   ├── operator_brief.md
+│   └── recovery_summary.json
+├── run_manifest_2026-03-25_010501.json
+├── case_manifest_2026-03-25_010501.json
+└── notes_recovery_auto_2026-03-25_010501.log
