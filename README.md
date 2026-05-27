@@ -25,6 +25,8 @@
 
 notes-recover is a forensic-grade reader for Apple Notes. Recover deleted notes, browse the raw NoteStore, and ship audit-ready bundles. Nothing leaves your machine.
 
+> 🤝 **Sister repo**: want a *prevention*-side workflow that schedules backups before notes go missing? See [**notebackup**](https://github.com/xiaojiou176-open/notebackup) — the Apple Notes backup control room (path-aware exports, `launchd` scheduling, health checks). `notebackup` covers the *before*; `notes-recover` covers the *after*. Together they cover the full Apple Notes lifecycle on macOS.
+
 ```
 ┌──────────────────────────────────────┐
 │  LOCAL-FIRST          ████████ 100%  │
