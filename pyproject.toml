@@ -3,7 +3,7 @@ requires = ["setuptools>=82.0.1", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "apple-notes-forensics"
+name = "noteyard"
 version = "0.1.0.post1"
 description = "Copy-first Apple Notes recovery toolkit for macOS, with reviewable case outputs, AI-assisted review, verification, and public-safe demo artifacts."
 readme = "README.md"
