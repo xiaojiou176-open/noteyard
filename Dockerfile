@@ -2,7 +2,7 @@ FROM python:3.11-slim
 
 LABEL org.opencontainers.image.title="NoteStore Lab"
 LABEL org.opencontainers.image.description="Local copy-first Apple Notes recovery and review toolkit with a stdio MCP surface."
-LABEL org.opencontainers.image.source="https://github.com/xiaojiou176-open/apple-notes-forensics"
+LABEL org.opencontainers.image.source="https://github.com/xiaojiou176-open/noteyard"
 LABEL io.modelcontextprotocol.server.name="io.github.xiaojiou176-open/notestorelab-mcp"
 
 ENV PYTHONDONTWRITEBYTECODE=1 \

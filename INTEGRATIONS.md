@@ -149,7 +149,7 @@ registry, or listing boundary.
 Current PyPI install path:
 
 ```bash
-python -m pip install apple-notes-forensics==0.1.0.post1
+python -m pip install noteyard==0.1.0.post1
 ```
 
 Repo-side metadata/build-readiness proof:
@@ -214,7 +214,7 @@ docker run --rm -i \
 ```
 
 The canonical image target for later validation is
-`ghcr.io/xiaojiou176-open/apple-notes-forensics:0.1.0.post1`, with `latest`
+`ghcr.io/xiaojiou176-open/noteyard:0.1.0.post1`, with `latest`
 as the optional convenience tag. Keep describing GHCR as an OCI/package surface, not as
 proof of a live Glama or Docker catalog listing.
 

@@ -4,14 +4,14 @@
   "title": "NoteStore Lab MCP",
   "description": "Local stdio MCP review surface for explicit NoteStore Lab Apple Notes case roots.",
   "repository": {
-    "url": "https://github.com/xiaojiou176-open/apple-notes-forensics",
+    "url": "https://github.com/xiaojiou176-open/noteyard",
     "source": "github"
   },
   "version": "0.1.0.post1",
   "packages": [
     {
       "registryType": "pypi",
-      "identifier": "apple-notes-forensics",
+      "identifier": "noteyard",
       "version": "0.1.0.post1",
       "transport": {
         "type": "stdio"

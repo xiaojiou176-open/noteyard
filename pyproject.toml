@@ -20,10 +20,10 @@ protobuf = []
 dev = ["pytest", "pre-commit", "setuptools>=82.0.1", "build", "twine"]
 
 [project.urls]
-Documentation = "https://github.com/xiaojiou176-open/apple-notes-forensics"
-Releases = "https://github.com/xiaojiou176-open/apple-notes-forensics/releases"
-Support = "https://github.com/xiaojiou176-open/apple-notes-forensics/blob/main/SUPPORT.md"
-Issues = "https://github.com/xiaojiou176-open/apple-notes-forensics/issues"
+Documentation = "https://github.com/xiaojiou176-open/noteyard"
+Releases = "https://github.com/xiaojiou176-open/noteyard/releases"
+Support = "https://github.com/xiaojiou176-open/noteyard/blob/main/SUPPORT.md"
+Issues = "https://github.com/xiaojiou176-open/noteyard/issues"
 
 [project.scripts]
 notes-recovery = "notes_recovery.cli.main:main"

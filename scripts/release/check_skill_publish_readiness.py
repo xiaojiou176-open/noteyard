@@ -24,7 +24,7 @@ DERIVED_SKILL_PATHS = (
     Path("plugins/notestorelab-openclaw-bundle/workspace/skills/notestorelab/SKILL.md"),
     Path("starter-bundles/openclaw/workspace/skills/notestorelab/SKILL.md"),
 )
-REPO_URL = "https://github.com/xiaojiou176-open/apple-notes-forensics"
+REPO_URL = "https://github.com/xiaojiou176-open/noteyard"
 CANONICAL_NAME = "notestorelab-case-review"
 PUBLIC_SKILL_DIR = Path("public-skills/notestorelab-case-review")
 PUBLIC_SKILL_SEMVER = "1.0.2"
@@ -189,7 +189,7 @@ def collect_skill_publish_errors(repo_root: Path) -> list[str]:
             "OpenHands/extensions submission still sits in a changes-requested review state",
             "What this skill teaches an agent",
             "Primary reviewer route:",
-            "Use cases: https://github.com/xiaojiou176-open/apple-notes-forensics/blob/main/USE_CASES.md",
+            "Use cases: https://github.com/xiaojiou176-open/noteyard/blob/main/USE_CASES.md",
             "Builder / raw-source references after the route above:",
             "Demo / proof links",
         ):
@@ -204,16 +204,16 @@ def collect_skill_publish_errors(repo_root: Path) -> list[str]:
         public_demo_text = public_skill_demo.read_text(encoding="utf-8")
         for token in (
             "Primary reviewer route:",
-            "Landing page: https://xiaojiou176-open.github.io/apple-notes-forensics/",
-            "Public proof page: https://xiaojiou176-open.github.io/apple-notes-forensics/proof.html",
-            "Use cases: https://github.com/xiaojiou176-open/apple-notes-forensics/blob/main/USE_CASES.md",
+            "Landing page: https://xiaojiou176-open.github.io/noteyard/",
+            "Public proof page: https://xiaojiou176-open.github.io/noteyard/proof.html",
+            "Use cases: https://github.com/xiaojiou176-open/noteyard/blob/main/USE_CASES.md",
             "Builder / raw-source references after the route above:",
             "the secondary ClawHub packet listing is live",
             "submission-done plus changes-requested",
         ):
             if token not in public_demo_text:
                 errors.append(f"public skill demo reference is missing required token: {token}")
-        if "https://github.com/xiaojiou176-open/apple-notes-forensics/blob/main/proof.html" in public_demo_text:
+        if "https://github.com/xiaojiou176-open/noteyard/blob/main/proof.html" in public_demo_text:
             errors.append(
                 "public skill demo reference still points first-hop proof at a blob page"
             )

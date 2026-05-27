@@ -466,7 +466,7 @@ def test_public_story_truth_passes_for_truthful_surface(tmp_path: Path) -> None:
     )
     _write(
         tmp_path / "notes_recovery" / "cli" / "tail_handlers.py",
-        'CHANGELOG_URL = "https://github.com/xiaojiou176-open/apple-notes-forensics/blob/main/CHANGELOG.md"\n',
+        'CHANGELOG_URL = "https://github.com/xiaojiou176-open/noteyard/blob/main/CHANGELOG.md"\n',
     )
     _write(
         tmp_path / "DISTRIBUTION.md",
@@ -487,7 +487,7 @@ def test_public_story_truth_detects_stale_release_and_pages_claims(tmp_path: Pat
             [
                 "# NoteStore Lab",
                 "",
-                "[Release](https://github.com/xiaojiou176-open/apple-notes-forensics/releases/tag/v0.1.0)",
+                "[Release](https://github.com/xiaojiou176-open/noteyard/releases/tag/v0.1.0)",
             ]
         ),
     )
@@ -506,7 +506,7 @@ def test_public_story_truth_detects_stale_release_and_pages_claims(tmp_path: Pat
     )
     _write(
         tmp_path / "notes_recovery" / "cli" / "tail_handlers.py",
-        'RELEASE_URL = "https://github.com/xiaojiou176-open/apple-notes-forensics/releases/tag/v0.1.0"\n',
+        'RELEASE_URL = "https://github.com/xiaojiou176-open/noteyard/releases/tag/v0.1.0"\n',
     )
     _write(
         tmp_path / "DISTRIBUTION.md",
@@ -525,15 +525,15 @@ def test_discovery_surface_contract_passes_for_aligned_surface(tmp_path: Path) -
         tmp_path / "llms.txt",
         "# NoteStore Lab\nnotes-recovery\nnotes-recovery-mcp\nCodex\nClaude Code\nMCP\nNot a primary front-door claim\nno shipped hosted API\ngood current examples of hosts\n.codex/config.toml\n.mcp.json\nremote-connector-first hosts\nOpenClaw-style hosts\nnotes-recovery ai-review --demo\nnotes-recovery ask-case --demo --question \"What should I inspect first?\"\n.venv/bin/python -m notes_recovery.mcp.server --case-dir ./output/Notes_Forensics_<run_ts>\n",
     )
-    _write(tmp_path / "robots.txt", "User-agent: *\nAllow: /\nSitemap: https://xiaojiou176-open.github.io/apple-notes-forensics/sitemap.xml\n")
+    _write(tmp_path / "robots.txt", "User-agent: *\nAllow: /\nSitemap: https://xiaojiou176-open.github.io/noteyard/sitemap.xml\n")
     _write(
         tmp_path / "sitemap.xml",
         "\n".join(
             [
                 "<urlset>",
-                "https://xiaojiou176-open.github.io/apple-notes-forensics/",
-                "https://xiaojiou176-open.github.io/apple-notes-forensics/llms.txt",
-                "https://xiaojiou176-open.github.io/apple-notes-forensics/robots.txt",
+                "https://xiaojiou176-open.github.io/noteyard/",
+                "https://xiaojiou176-open.github.io/noteyard/llms.txt",
+                "https://xiaojiou176-open.github.io/noteyard/robots.txt",
                 "</urlset>",
             ]
         ),
@@ -556,8 +556,8 @@ def test_discovery_surface_contract_passes_for_aligned_surface(tmp_path: Path) -
                 '{',
                 '  "name": "NoteStore Lab",',
                 '  "short_name": "NoteStore Lab",',
-                '  "start_url": "/apple-notes-forensics/",',
-                '  "scope": "/apple-notes-forensics/",',
+                '  "start_url": "/noteyard/",',
+                '  "scope": "/noteyard/",',
                 '  "theme_color": "#16212b",',
                 '  "background_color": "#f5f1e8",',
                 '  "icons": [',

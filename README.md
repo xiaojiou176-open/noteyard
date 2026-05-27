@@ -6,7 +6,7 @@
   <img src="./assets/brand/notestorelab-mark.svg" alt="NoteStore Lab brand mark" width="84" height="84" />
 </p>
 
-`apple-notes-forensics` is the repository. **NoteStore Lab** is the public
+`noteyard` is the repository. **NoteStore Lab** is the public
 product name for the same copy-first Apple Notes recovery lab.
 
 > Copy first. Prove the case path. Then let AI and local MCP review the same
@@ -15,16 +15,16 @@ product name for the same copy-first Apple Notes recovery lab.
 > Short copy-first path:
 > `notes-recovery demo` -> `notes-recovery doctor`
 >
-> Repository identity: `apple-notes-forensics` · Primary entrypoints:
+> Repository identity: `noteyard` · Primary entrypoints:
 > `notes-recovery` and `notes-recovery-mcp`
 
-[![Release](https://img.shields.io/github/v/release/xiaojiou176-open/apple-notes-forensics?style=flat-square)](https://github.com/xiaojiou176-open/apple-notes-forensics/releases)
-[![License](https://img.shields.io/github/license/xiaojiou176-open/apple-notes-forensics?style=flat-square)](./LICENSE)
-[![CI](https://img.shields.io/github/actions/workflow/status/xiaojiou176-open/apple-notes-forensics/ci.yml?branch=main&style=flat-square&label=ci)](https://github.com/xiaojiou176-open/apple-notes-forensics/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/xiaojiou176-open/noteyard?style=flat-square)](https://github.com/xiaojiou176-open/noteyard/releases)
+[![License](https://img.shields.io/github/license/xiaojiou176-open/noteyard?style=flat-square)](./LICENSE)
+[![CI](https://img.shields.io/github/actions/workflow/status/xiaojiou176-open/noteyard/ci.yml?branch=main&style=flat-square&label=ci)](https://github.com/xiaojiou176-open/noteyard/actions/workflows/ci.yml)
 
 [Start Here](#start-here) ·
 [Public Proof](./proof.html) ·
-[Landing](https://xiaojiou176-open.github.io/apple-notes-forensics/) ·
+[Landing](https://xiaojiou176-open.github.io/noteyard/) ·
 [Use Cases](./USE_CASES.md) ·
 [Builder Guide](./INTEGRATIONS.md) ·
 [Support](./SUPPORT.md)
@@ -81,7 +81,7 @@ Open the right next door after that first pass:
 
 | If you want to... | Open this next | Why |
 | --- | --- | --- |
-| see the copy-first story and proof-path overview | [Landing](https://xiaojiou176-open.github.io/apple-notes-forensics/) | this is the shortest product overview for a first-time visitor |
+| see the copy-first story and proof-path overview | [Landing](https://xiaojiou176-open.github.io/noteyard/) | this is the shortest product overview for a first-time visitor |
 | separate repo proof from manual or platform tails | [Public Proof](./proof.html) | this is where "what is proved" and "what is still manual" are split cleanly |
 | match your goal to the right workflow lane | [Use Cases](./USE_CASES.md) | it sorts operator, AI review, MCP, and case-diff jobs without mixing them |
 | reuse the same case root in Codex / Claude Code | [Builder Guide](./INTEGRATIONS.md) | builder reuse is real, but it still comes after the operator path |
@@ -488,7 +488,7 @@ The repo-side Glama metadata surface is now explicit as well:
 
 - `glama.json`
 - `Dockerfile`
-- `ghcr.io/xiaojiou176-open/apple-notes-forensics:0.1.0.post1`
+- `ghcr.io/xiaojiou176-open/noteyard:0.1.0.post1`
 
 That is enough to prepare a Glama Add Server submission or a Docker-first
 catalog conversation. It is still not proof of a live Glama listing until fresh
@@ -563,7 +563,7 @@ Right now:
   as GitHub Settings items, not repository facts
 
 Use [CHANGELOG.md](./CHANGELOG.md) for tracked milestone history and the
-[Releases](https://github.com/xiaojiou176-open/apple-notes-forensics/releases)
+[Releases](https://github.com/xiaojiou176-open/noteyard/releases)
 page for the published GitHub release feed and the synthetic public demo bundle.
 
 The current repo-owned public contract is:
@@ -724,13 +724,13 @@ is intentionally metadata-focused:
 
 ## Repository Links
 
-- [Landing page](https://xiaojiou176-open.github.io/apple-notes-forensics/)
+- [Landing page](https://xiaojiou176-open.github.io/noteyard/)
 - [LLMs guide](./llms.txt)
 - [Changelog](./CHANGELOG.md)
 - [Use Cases](./USE_CASES.md)
 - [Ecosystem Fit](./ECOSYSTEM.md)
 - [Builder Guide](./INTEGRATIONS.md)
-- [Issue tracker](https://github.com/xiaojiou176-open/apple-notes-forensics/issues)
+- [Issue tracker](https://github.com/xiaojiou176-open/noteyard/issues)
 - [Support guide](./SUPPORT.md)
 - [Security policy](./SECURITY.md)
 - [Contributing guide](./CONTRIBUTING.md)

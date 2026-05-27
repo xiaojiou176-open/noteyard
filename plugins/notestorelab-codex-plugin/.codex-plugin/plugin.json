@@ -4,10 +4,10 @@
   "description": "Case-root review workflow and bounded MCP launcher for NoteStore Lab.",
   "author": {
     "name": "NoteStore Lab contributors",
-    "url": "https://github.com/xiaojiou176-open/apple-notes-forensics"
+    "url": "https://github.com/xiaojiou176-open/noteyard"
   },
-  "homepage": "https://github.com/xiaojiou176-open/apple-notes-forensics",
-  "repository": "https://github.com/xiaojiou176-open/apple-notes-forensics",
+  "homepage": "https://github.com/xiaojiou176-open/noteyard",
+  "repository": "https://github.com/xiaojiou176-open/noteyard",
   "license": "MIT",
   "keywords": [
     "apple-notes",
@@ -27,9 +27,9 @@
     "capabilities": [
       "Read"
     ],
-    "websiteURL": "https://github.com/xiaojiou176-open/apple-notes-forensics",
-    "privacyPolicyURL": "https://github.com/xiaojiou176-open/apple-notes-forensics/blob/main/SECURITY.md",
-    "termsOfServiceURL": "https://github.com/xiaojiou176-open/apple-notes-forensics/blob/main/LICENSE",
+    "websiteURL": "https://github.com/xiaojiou176-open/noteyard",
+    "privacyPolicyURL": "https://github.com/xiaojiou176-open/noteyard/blob/main/SECURITY.md",
+    "termsOfServiceURL": "https://github.com/xiaojiou176-open/noteyard/blob/main/LICENSE",
     "defaultPrompt": [
       "Use NoteStore Lab to inspect the review_index before forming conclusions.",
       "Use NoteStore Lab to answer one bounded question from derived artifacts, not the live Notes store."

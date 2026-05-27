@@ -80,11 +80,11 @@ That packet is intentionally separate from the canonical skill SSOT:
 
 The canonical installable package surface for this repository is PyPI:
 
-- package name: `apple-notes-forensics`
+- package name: `noteyard`
 - `server.json` points at the PyPI package because the current MCP publication
   story is Python-first
 - this is the intended PyPI package identifier and version for the current repo
-  contract: `apple-notes-forensics==0.1.0.post1`
+  contract: `noteyard==0.1.0.post1`
 - fresh package read-back exists for this package lane, but keep package status
   as supporting distribution truth rather than the first sentence of the
   product story
@@ -114,8 +114,8 @@ multi-tenant backend, live Glama listing, or Docker MCP Catalog listing.
 
 The canonical image target, if and when later validation is refreshed, is:
 
-- `ghcr.io/xiaojiou176-open/apple-notes-forensics:0.1.0.post1`
-- optional convenience tag: `ghcr.io/xiaojiou176-open/apple-notes-forensics:latest`
+- `ghcr.io/xiaojiou176-open/noteyard:0.1.0.post1`
+- optional convenience tag: `ghcr.io/xiaojiou176-open/noteyard:latest`
 
 `glama.json` is now the repo-owned metadata side of the Glama story. It makes
 the intended maintainer identity explicit, but it does **not** prove a live
