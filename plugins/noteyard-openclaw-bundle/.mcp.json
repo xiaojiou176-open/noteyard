@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "noteyard": {
+      "command": "./bin/noteyard-mcp",
+      "env": {
+        "NOTEYARD_REPO_ROOT": "${NOTEYARD_REPO_ROOT}",
+        "NOTEYARD_CASE_DIR": "${NOTEYARD_CASE_DIR}",
+        "NOTEYARD_PYTHON": "${NOTEYARD_PYTHON}"
+      }
+    }
+  }
+}

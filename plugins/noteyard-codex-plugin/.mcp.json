@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "noteyard": {
+      "command": "./bin/noteyard-mcp"
+    }
+  }
+}

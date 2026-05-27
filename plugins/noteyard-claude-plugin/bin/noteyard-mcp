@@ -1,0 +1,27 @@
+#!/bin/sh
+set -eu
+
+repo_root="${NOTEYARD_REPO_ROOT:-}"
+case_dir="${NOTEYARD_CASE_DIR:-}"
+python_bin="${NOTEYARD_PYTHON:-}"
+
+if [ -z "$repo_root" ]; then
+  echo "NOTEYARD_REPO_ROOT is required." >&2
+  exit 1
+fi
+
+if [ -z "$case_dir" ]; then
+  echo "NOTEYARD_CASE_DIR is required." >&2
+  exit 1
+fi
+
+if [ -z "$python_bin" ]; then
+  python_bin="$repo_root/.venv/bin/python"
+fi
+
+if [ ! -x "$python_bin" ]; then
+  echo "Python launcher is not executable: $python_bin" >&2
+  exit 1
+fi
+
+exec "$python_bin" -m notes_recovery.mcp.server --case-dir "$case_dir"
