@@ -16,15 +16,15 @@ def test_distribution_artifacts_exist() -> None:
     )
     distribution_text = (repo_root / "DISTRIBUTION.md").read_text(encoding="utf-8")
 
-    assert server_payload["name"] == "io.github.xiaojiou176-open/notestorelab-mcp"
+    assert server_payload["name"] == "io.github.xiaojiou176-open/noteyard-mcp"
     assert server_payload["repository"]["url"] == "https://github.com/xiaojiou176-open/noteyard"
     assert server_payload["repository"]["source"] == "github"
     assert server_payload["packages"][0]["identifier"] == "noteyard"
-    assert marketplace_payload["name"] == "notestorelab-plugins"
+    assert marketplace_payload["name"] == "noteyard-plugins"
     assert marketplace_payload["owner"]["email"].endswith("@users.noreply.github.com")
-    assert marketplace_payload["plugins"][0]["name"] == "notestorelab-claude-plugin"
+    assert marketplace_payload["plugins"][0]["name"] == "noteyard-claude-plugin"
     assert marketplace_payload["plugins"][0]["author"]["email"] == marketplace_payload["owner"]["email"]
-    assert marketplace_payload["plugins"][0]["source"] == "./plugins/notestorelab-claude-plugin"
+    assert marketplace_payload["plugins"][0]["source"] == "./plugins/noteyard-claude-plugin"
     assert "intended PyPI package identifier and version" in distribution_text
     assert (
         "the intake is submitted on [`cline/mcp-marketplace#1324`]"
@@ -41,11 +41,11 @@ def test_distribution_artifacts_exist() -> None:
     )
     assert '"MCP Registry submission completed"' in distribution_text
 
-    assert (repo_root / "plugins" / "notestorelab-codex-plugin" / ".codex-plugin" / "plugin.json").exists()
-    assert (repo_root / "plugins" / "notestorelab-codex-plugin" / ".mcp.json").exists()
-    assert (repo_root / "plugins" / "notestorelab-claude-plugin" / ".claude-plugin" / "plugin.json").exists()
-    assert (repo_root / "plugins" / "notestorelab-claude-plugin" / ".mcp.json").exists()
-    assert (repo_root / "plugins" / "notestorelab-openclaw-bundle" / ".claude-plugin" / "plugin.json").exists()
+    assert (repo_root / "plugins" / "noteyard-codex-plugin" / ".codex-plugin" / "plugin.json").exists()
+    assert (repo_root / "plugins" / "noteyard-codex-plugin" / ".mcp.json").exists()
+    assert (repo_root / "plugins" / "noteyard-claude-plugin" / ".claude-plugin" / "plugin.json").exists()
+    assert (repo_root / "plugins" / "noteyard-claude-plugin" / ".mcp.json").exists()
+    assert (repo_root / "plugins" / "noteyard-openclaw-bundle" / ".claude-plugin" / "plugin.json").exists()
 
 
 def test_build_distribution_bundles(tmp_path: Path) -> None:
@@ -59,20 +59,20 @@ def test_build_distribution_bundles(tmp_path: Path) -> None:
 
     expected_entries = {
         "codex": {
-            "notestorelab-codex-plugin/.codex-plugin/plugin.json",
-            "notestorelab-codex-plugin/.mcp.json",
-            "notestorelab-codex-plugin/bin/notestorelab-mcp",
-            "notestorelab-codex-plugin/skills/notestorelab-case-review/SKILL.md",
+            "noteyard-codex-plugin/.codex-plugin/plugin.json",
+            "noteyard-codex-plugin/.mcp.json",
+            "noteyard-codex-plugin/bin/noteyard-mcp",
+            "noteyard-codex-plugin/skills/noteyard-case-review/SKILL.md",
         },
         "claude": {
-            "notestorelab-claude-plugin/.claude-plugin/plugin.json",
-            "notestorelab-claude-plugin/.mcp.json",
-            "notestorelab-claude-plugin/bin/notestorelab-mcp",
+            "noteyard-claude-plugin/.claude-plugin/plugin.json",
+            "noteyard-claude-plugin/.mcp.json",
+            "noteyard-claude-plugin/bin/noteyard-mcp",
         },
         "openclaw": {
-            "notestorelab-openclaw-bundle/.claude-plugin/plugin.json",
-            "notestorelab-openclaw-bundle/.mcp.json",
-            "notestorelab-openclaw-bundle/bin/notestorelab-mcp",
+            "noteyard-openclaw-bundle/.claude-plugin/plugin.json",
+            "noteyard-openclaw-bundle/.mcp.json",
+            "noteyard-openclaw-bundle/bin/noteyard-mcp",
         },
     }
 

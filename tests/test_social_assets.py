@@ -27,7 +27,7 @@ def test_social_preview_svg_carries_current_public_story() -> None:
     svg_text = svg_path.read_text(encoding="utf-8")
 
     for token in (
-        "NoteStore Lab",
+        "Noteyard",
         "Copy-first Apple Notes recovery",
         "bounded AI review",
         "Codex",

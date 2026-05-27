@@ -1,12 +1,12 @@
-# NoteStore Lab
+# Noteyard
 
-<!-- mcp-name: io.github.xiaojiou176-open/notestorelab-mcp -->
+<!-- mcp-name: io.github.xiaojiou176-open/noteyard-mcp -->
 
 <p>
-  <img src="./assets/brand/notestorelab-mark.svg" alt="NoteStore Lab brand mark" width="84" height="84" />
+  <img src="./assets/brand/noteyard-mark.svg" alt="Noteyard brand mark" width="84" height="84" />
 </p>
 
-`noteyard` is the repository. **NoteStore Lab** is the public
+`noteyard` is the repository. **Noteyard** is the public
 product name for the same copy-first Apple Notes recovery lab.
 
 > Copy first. Prove the case path. Then let AI and local MCP review the same
@@ -91,7 +91,7 @@ Open the right next door after that first pass:
 - **Primary**: the local copy-first recovery lab on one explicit case root
 - **Primary extension**: `notes-recovery-mcp` as the repo's `pure_mcp` review
   surface
-- **Secondary**: `public-skills/notestorelab-case-review/` as the standalone
+- **Secondary**: `public-skills/noteyard-case-review/` as the standalone
   `pure_skills` packet for host-native reviewers; its secondary ClawHub packet
   listing is live, but it still stays behind the landing/proof route
 - **Later / companion**: plugin bundles, deeper package/registry detail,
@@ -110,7 +110,7 @@ Deep reads once the first path makes sense:
 
 ## What It Is
 
-NoteStore Lab is a local Apple Notes recovery toolkit for **macOS**.
+Noteyard is a local Apple Notes recovery toolkit for **macOS**.
 It is built around one rule: work on copied evidence, not the live Notes store.
 
 The CLI-first chain stays intentionally simple:
@@ -220,7 +220,7 @@ notes-recovery --help
 
 Expected first-look signals:
 
-- the command prints `NoteStore Lab public demo`
+- the command prints `Noteyard public demo`
 - `notes-recovery ai-review --demo` generates a synthetic triage summary,
   findings, and next-step questions
 - `notes-recovery ask-case --demo ...` returns an evidence-backed answer with
@@ -396,15 +396,15 @@ time, so this README keeps the primary story on the local bench first. Use
 boundary.
 
 The repository now also ships a canonical independent skill surface at
-`skills/notestorelab-case-review/`. Treat that directory as the SSOT skill
+`skills/noteyard-case-review/`. Treat that directory as the SSOT skill
 package, and treat the plugin/starter skill files as host-specific derived
 copies. That makes the skill independently referenceable without pretending it
 has already cleared any external directory gate.
 
 For OpenHands/extensions and ClawHub-style submissions, the repo now also ships
 an OpenHands/extensions-friendly public skill folder at
-`public-skills/notestorelab-case-review/`. Treat that packet as the
-portable listing lane, while `skills/notestorelab-case-review/` remains the
+`public-skills/noteyard-case-review/`. Treat that packet as the
+portable listing lane, while `skills/noteyard-case-review/` remains the
 canonical skill text.
 
 When you want the repo-side metadata/build-readiness gate before the next PyPI
@@ -425,7 +425,7 @@ Practical host notes:
 Current integration fit:
 
 - **Primary fit**: MCP, Codex, Claude Code
-- **OpenHands/extensions-friendly public skill folder**: `public-skills/notestorelab-case-review/`
+- **OpenHands/extensions-friendly public skill folder**: `public-skills/noteyard-case-review/`
 - **Secondary / comparison fit**: OpenCode
 - **Not a primary front-door claim**: OpenClaw, hosted portals, generic AI-agent platforms
 
@@ -438,8 +438,8 @@ Builder-facing status today:
 | shared generated client | not shipped | use the local MCP surface or parse manifests directly |
 | thin SDK | not shipped | future path only, after the shared case/MCP contract is locked |
 | repo-owned host bundles | companion packaging | use `plugins/`, `.claude-plugin/`, `server.json`, and `scripts/release/build_distribution_bundles.py` after the local MCP story is already clear |
-| canonical independent skill surface | secondary current lane | use `skills/notestorelab-case-review/` as the only SSOT skill surface; plugin/starter copies are derived packaging |
-| OpenHands/extensions-friendly public skill folder | portable secondary packet | use `public-skills/notestorelab-case-review/` for OpenHands/extensions or ClawHub-style skill submissions without turning it into the repo's main front door |
+| canonical independent skill surface | secondary current lane | use `skills/noteyard-case-review/` as the only SSOT skill surface; plugin/starter copies are derived packaging |
+| OpenHands/extensions-friendly public skill folder | portable secondary packet | use `public-skills/noteyard-case-review/` for OpenHands/extensions or ClawHub-style skill submissions without turning it into the repo's main front door |
 | official marketplace/catalog listing | Wave 2 external validation | repo-owned artifacts do not imply official listing or publish read-back |
 
 ## Docker And Catalog Later Surface
@@ -456,19 +456,19 @@ The Docker story is intentionally narrow and secondary:
 Build the image:
 
 ```bash
-docker build -t notestorelab:0.1.0.post1 .
+docker build -t noteyard:0.1.0.post1 .
 ```
 
 Run the public-safe demo:
 
 ```bash
-docker run --rm notestorelab:0.1.0.post1 notes-recovery demo
+docker run --rm noteyard:0.1.0.post1 notes-recovery demo
 ```
 
 Run the MCP help surface:
 
 ```bash
-docker run --rm --entrypoint notes-recovery-mcp notestorelab:0.1.0.post1 --help
+docker run --rm --entrypoint notes-recovery-mcp noteyard:0.1.0.post1 --help
 ```
 
 Review an existing copied case root through the local stdio MCP server:
@@ -477,7 +477,7 @@ Review an existing copied case root through the local stdio MCP server:
 docker run --rm -i \
   -v "$PWD/output:/cases:ro" \
   --entrypoint notes-recovery-mcp \
-  notestorelab:0.1.0.post1 \
+  noteyard:0.1.0.post1 \
   --case-dir /cases/Notes_Forensics_<run_ts>
 ```
 

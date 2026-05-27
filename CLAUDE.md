@@ -2,7 +2,7 @@
 
 ## What This Repository Is
 
-NoteStore Lab is a CLI-first Apple Notes forensic recovery toolkit for macOS.
+Noteyard is a CLI-first Apple Notes forensic recovery toolkit for macOS.
 
 The canonical execution chain is:
 

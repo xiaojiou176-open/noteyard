@@ -275,7 +275,7 @@ def build_mcp_server(
     registry = CaseRegistry.build(case_dirs, cases_roots)
     retrieval_contract = derived_artifact_retrieval_contract()
     server = FastMCP(
-        "NoteStore Lab MCP",
+        "Noteyard MCP",
         instructions=(
             "Read-mostly MCP server for copy-first Apple Notes recovery cases. "
             "Stay on derived review artifacts and bounded derived-output tools."

@@ -14,7 +14,7 @@ ROOT_PUBLIC_CONTRACT_FILES = (
 )
 
 README_PUBLIC_SURFACE_TOKENS = (
-    "NoteStore Lab",
+    "Noteyard",
     "notes-recovery",
     "proof.html",
     "llms.txt",

@@ -1,9 +1,0 @@
-{
-  "name": "notestorelab-claude-plugin",
-  "description": "Bounded case-root MCP launcher for NoteStore Lab review workflows.",
-  "version": "0.1.0",
-  "author": {
-    "name": "NoteStore Lab contributors"
-  },
-  "mcpServers": "./.mcp.json"
-}

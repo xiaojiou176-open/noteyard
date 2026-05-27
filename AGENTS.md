@@ -2,7 +2,7 @@
 
 ## Repository Identity
 
-- Project: NoteStore Lab
+- Project: Noteyard
 - Canonical public repo: `xiaojiou176-open/noteyard`
 - Primary entrypoint: `notes-recovery`
 - Host boundary: macOS only

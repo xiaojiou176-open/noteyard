@@ -1,12 +1,12 @@
 {
-  "name": "notestorelab-starters",
+  "name": "noteyard-starters",
   "owner": {
-    "name": "NoteStore Lab"
+    "name": "Noteyard"
   },
   "plugins": [
     {
-      "name": "notestorelab",
-      "source": "plugins/notestorelab"
+      "name": "noteyard",
+      "source": "plugins/noteyard"
     }
   ]
 }

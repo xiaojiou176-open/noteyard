@@ -22,7 +22,7 @@ PACKAGE_NAME_PATTERN = re.compile(r"^\s*([A-Za-z0-9_.-]+)")
 GITHUB_SLUG_PATTERN = re.compile(
     r"(?:github\.com[:/])(?P<slug>[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+?)(?:\.git)?$"
 )
-DETECTOR_NAME = "notestorelab-python-environment"
+DETECTOR_NAME = "noteyard-python-environment"
 DETECTOR_VERSION = "1.0.0"
 DEFAULT_MANIFEST_KEY = "python-environment"
 DEVELOPMENT_GROUPS = {"dev"}

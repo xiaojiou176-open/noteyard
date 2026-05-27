@@ -1,4 +1,4 @@
-[mcp_servers.notestorelab]
+[mcp_servers.noteyard]
 command = "../.venv/bin/python"
 args = [
   "-m",

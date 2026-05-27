@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
-  <title id="title">NoteStore Lab public-safe demo proof</title>
+  <title id="title">Noteyard public-safe demo proof</title>
   <desc id="desc">A single proof image showing a copied-evidence Apple Notes recovery workflow with one case root, backup, recovery, verification, and report outputs.</desc>
   <defs>
     <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
@@ -12,7 +12,7 @@
   <rect x="76" y="76" width="1048" height="628" rx="18" fill="#1d1d1d"/>
   <rect x="112" y="100" width="220" height="34" rx="17" fill="#121924" stroke="#35506b" stroke-width="1.5"/>
   <text x="136" y="123" fill="#8cc5ff" font-family="Menlo, Monaco, Consolas, monospace" font-size="16" font-weight="700">operator-first proof</text>
-  <text x="112" y="138" fill="#f5f1e8" font-family="Menlo, Monaco, Consolas, monospace" font-size="22">NoteStore Lab</text>
+  <text x="112" y="138" fill="#f5f1e8" font-family="Menlo, Monaco, Consolas, monospace" font-size="22">Noteyard</text>
   <text x="112" y="188" fill="#f5f1e8" font-family="Menlo, Monaco, Consolas, monospace" font-size="31" font-weight="700">Copy-first Apple Notes</text>
   <text x="112" y="226" fill="#f5f1e8" font-family="Menlo, Monaco, Consolas, monospace" font-size="31" font-weight="700">recovery on macOS</text>
   <text x="112" y="264" fill="#bfc9d4" font-family="Menlo, Monaco, Consolas, monospace" font-size="18">Public-safe demo proof: one copied-evidence case root,</text>

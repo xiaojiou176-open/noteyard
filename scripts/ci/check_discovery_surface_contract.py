@@ -13,7 +13,7 @@ DISCOVERY_FILES = (
 )
 
 DISCOVERY_ASSET_FILES = (
-    "assets/brand/notestorelab-mark.svg",
+    "assets/brand/noteyard-mark.svg",
     "assets/brand/favicon-32.png",
     "assets/brand/apple-touch-icon.png",
     "assets/brand/icon-192.png",
@@ -21,7 +21,7 @@ DISCOVERY_ASSET_FILES = (
 )
 
 LLMS_REQUIRED_TOKENS = (
-    "NoteStore Lab",
+    "Noteyard",
     "notes-recovery",
     "notes-recovery-mcp",
     "Codex",
@@ -51,8 +51,8 @@ ERROR_PAGE_REQUIRED_TOKENS = (
 )
 
 WEBMANIFEST_REQUIRED_TOKENS = (
-    '"name": "NoteStore Lab"',
-    '"short_name": "NoteStore Lab"',
+    '"name": "Noteyard"',
+    '"short_name": "Noteyard"',
     '"start_url": "/noteyard/"',
     '"scope": "/noteyard/"',
     '"theme_color": "#16212b"',
@@ -79,7 +79,7 @@ INTEGRATIONS_DISCOVERY_TOKENS = (
     "remote-connector-first hosts",
     ".codex/config.toml",
     ".mcp.json",
-    "[mcp_servers.notestorelab]",
+    "[mcp_servers.noteyard]",
     "../.venv/bin/python",
     'cwd = ".."',
     "\"mcpServers\"",

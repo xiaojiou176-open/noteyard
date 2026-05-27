@@ -1,0 +1,9 @@
+{
+  "name": "noteyard-claude-plugin",
+  "description": "Bounded case-root MCP launcher for Noteyard review workflows.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Noteyard contributors"
+  },
+  "mcpServers": "./.mcp.json"
+}

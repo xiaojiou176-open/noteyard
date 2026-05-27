@@ -57,7 +57,7 @@ def test_docs_surface_passes_for_minimal_repo(tmp_path: Path) -> None:
         tmp_path / "README.md",
         "\n".join(
             [
-                "# NoteStore Lab",
+                "# Noteyard",
                 "",
                 "[License](LICENSE)",
                 "[Public Proof](proof.html)",
@@ -73,7 +73,7 @@ def test_docs_surface_passes_for_minimal_repo(tmp_path: Path) -> None:
         ),
     )
     _write(tmp_path / "proof.html", "<html><body>proof</body></html>\n")
-    _write(tmp_path / "llms.txt", "# NoteStore Lab\n")
+    _write(tmp_path / "llms.txt", "# Noteyard\n")
     _write(tmp_path / "LICENSE", "MIT\n")
     _write(tmp_path / "CONTRIBUTING.md", "# Contributing\n")
     _write(tmp_path / "SECURITY.md", "# Security\n")
@@ -90,7 +90,7 @@ def test_docs_surface_rejects_removed_docs_tree(tmp_path: Path) -> None:
         tmp_path / "README.md",
         "\n".join(
             [
-                "# NoteStore Lab",
+                "# Noteyard",
                 "",
                 "[License](LICENSE)",
                 "[Public Proof](proof.html)",
@@ -106,7 +106,7 @@ def test_docs_surface_rejects_removed_docs_tree(tmp_path: Path) -> None:
         ),
     )
     _write(tmp_path / "proof.html", "<html><body>proof</body></html>\n")
-    _write(tmp_path / "llms.txt", "# NoteStore Lab\n")
+    _write(tmp_path / "llms.txt", "# Noteyard\n")
     _write(tmp_path / "LICENSE", "MIT\n")
     _write(tmp_path / "CONTRIBUTING.md", "# Contributing\n")
     _write(tmp_path / "SECURITY.md", "# Security\n")
@@ -353,7 +353,7 @@ def test_verification_contract_passes_for_aligned_surface(tmp_path: Path) -> Non
     )
     readme_text = "\n".join(
         [
-            "# NoteStore Lab",
+            "# Noteyard",
             *README_VERIFICATION_REQUIRED_TOKENS,
             "See CONTRIBUTING.md for the canonical baseline smoke and full suite commands.",
             "[Contributing](CONTRIBUTING.md)",
@@ -361,7 +361,7 @@ def test_verification_contract_passes_for_aligned_surface(tmp_path: Path) -> Non
     )
     contributing_text = _build_contributing_verification_block()
     _write(tmp_path / "README.md", readme_text)
-    _write(tmp_path / "llms.txt", "# NoteStore Lab\n")
+    _write(tmp_path / "llms.txt", "# Noteyard\n")
     _write(tmp_path / "CONTRIBUTING.md", contributing_text)
     _write(tmp_path / ".github" / "workflows" / "ci.yml", workflow_block)
 
@@ -371,7 +371,7 @@ def test_verification_contract_passes_for_aligned_surface(tmp_path: Path) -> Non
 def test_verification_contract_detects_readme_drift(tmp_path: Path) -> None:
     _write(
         tmp_path / "README.md",
-        "# NoteStore Lab\nbaseline smoke\nfull suite\noptional surfaces\n.venv/bin/python -m pytest tests/\n",
+        "# Noteyard\nbaseline smoke\nfull suite\noptional surfaces\n.venv/bin/python -m pytest tests/\n",
     )
     _write(
         tmp_path / "CONTRIBUTING.md",
@@ -408,7 +408,7 @@ def test_verification_contract_detects_baseline_deep_mix(tmp_path: Path) -> None
         tmp_path / "README.md",
         "\n".join(
             [
-                "# NoteStore Lab",
+                "# Noteyard",
                 *README_VERIFICATION_REQUIRED_TOKENS,
                 "[Contributing](CONTRIBUTING.md)",
             ]
@@ -485,7 +485,7 @@ def test_public_story_truth_detects_stale_release_and_pages_claims(tmp_path: Pat
         tmp_path / "README.md",
         "\n".join(
             [
-                "# NoteStore Lab",
+                "# Noteyard",
                 "",
                 "[Release](https://github.com/xiaojiou176-open/noteyard/releases/tag/v0.1.0)",
             ]
@@ -523,7 +523,7 @@ def test_public_story_truth_detects_stale_release_and_pages_claims(tmp_path: Pat
 def test_discovery_surface_contract_passes_for_aligned_surface(tmp_path: Path) -> None:
     _write(
         tmp_path / "llms.txt",
-        "# NoteStore Lab\nnotes-recovery\nnotes-recovery-mcp\nCodex\nClaude Code\nMCP\nNot a primary front-door claim\nno shipped hosted API\ngood current examples of hosts\n.codex/config.toml\n.mcp.json\nremote-connector-first hosts\nOpenClaw-style hosts\nnotes-recovery ai-review --demo\nnotes-recovery ask-case --demo --question \"What should I inspect first?\"\n.venv/bin/python -m notes_recovery.mcp.server --case-dir ./output/Notes_Forensics_<run_ts>\n",
+        "# Noteyard\nnotes-recovery\nnotes-recovery-mcp\nCodex\nClaude Code\nMCP\nNot a primary front-door claim\nno shipped hosted API\ngood current examples of hosts\n.codex/config.toml\n.mcp.json\nremote-connector-first hosts\nOpenClaw-style hosts\nnotes-recovery ai-review --demo\nnotes-recovery ask-case --demo --question \"What should I inspect first?\"\n.venv/bin/python -m notes_recovery.mcp.server --case-dir ./output/Notes_Forensics_<run_ts>\n",
     )
     _write(tmp_path / "robots.txt", "User-agent: *\nAllow: /\nSitemap: https://xiaojiou176-open.github.io/noteyard/sitemap.xml\n")
     _write(
@@ -554,8 +554,8 @@ def test_discovery_surface_contract_passes_for_aligned_surface(tmp_path: Path) -
         "\n".join(
             [
                 '{',
-                '  "name": "NoteStore Lab",',
-                '  "short_name": "NoteStore Lab",',
+                '  "name": "Noteyard",',
+                '  "short_name": "Noteyard",',
                 '  "start_url": "/noteyard/",',
                 '  "scope": "/noteyard/",',
                 '  "theme_color": "#16212b",',
@@ -569,7 +569,7 @@ def test_discovery_surface_contract_passes_for_aligned_surface(tmp_path: Path) -
         ),
     )
     for rel_path in (
-        "assets/brand/notestorelab-mark.svg",
+        "assets/brand/noteyard-mark.svg",
         "assets/brand/favicon-32.png",
         "assets/brand/apple-touch-icon.png",
         "assets/brand/icon-192.png",
@@ -580,7 +580,7 @@ def test_discovery_surface_contract_passes_for_aligned_surface(tmp_path: Path) -
         tmp_path / "README.md",
         "\n".join(
             [
-                "# NoteStore Lab",
+                "# Noteyard",
                 "[LLMs Guide](./llms.txt)",
                 "Codex",
                 "Claude Code",
@@ -604,7 +604,7 @@ def test_discovery_surface_contract_passes_for_aligned_surface(tmp_path: Path) -
                 "repo-owned skills pack",
                 ".codex/config.toml",
                 ".mcp.json",
-                "[mcp_servers.notestorelab]",
+                "[mcp_servers.noteyard]",
                 "../.venv/bin/python",
                 'cwd = ".."',
                 '"mcpServers"',
@@ -662,12 +662,12 @@ def test_discovery_surface_contract_passes_for_aligned_surface(tmp_path: Path) -
 
 
 def test_discovery_surface_contract_detects_missing_llms_tokens(tmp_path: Path) -> None:
-    _write(tmp_path / "llms.txt", "# NoteStore Lab\n")
+    _write(tmp_path / "llms.txt", "# Noteyard\n")
     _write(tmp_path / "robots.txt", "User-agent: *\nAllow: /\n")
     _write(tmp_path / "sitemap.xml", "<urlset></urlset>\n")
     _write(tmp_path / "404.html", "Page not found\n")
     _write(tmp_path / "site.webmanifest", "{}\n")
-    _write(tmp_path / "README.md", "# NoteStore Lab\n")
+    _write(tmp_path / "README.md", "# Noteyard\n")
     _write(tmp_path / "INTEGRATIONS.md", "# Builder Guide\n")
     _write(tmp_path / "SUPPORT.md", "# Support\n")
     _write(tmp_path / "index.html", "<html></html>\n")
@@ -675,10 +675,10 @@ def test_discovery_surface_contract_detects_missing_llms_tokens(tmp_path: Path) 
     errors = collect_discovery_surface_errors(tmp_path)
     assert any("llms.txt is missing required token: Codex" in error for error in errors)
     assert any("llms.txt is missing discovery token: good current examples of hosts" in error for error in errors)
-    assert any("missing discovery asset file: assets/brand/notestorelab-mark.svg" in error for error in errors)
-    assert any("site.webmanifest is missing required token: \"name\": \"NoteStore Lab\"" in error for error in errors)
+    assert any("missing discovery asset file: assets/brand/noteyard-mark.svg" in error for error in errors)
+    assert any("site.webmanifest is missing required token: \"name\": \"Noteyard\"" in error for error in errors)
     assert any("README.md is missing discovery token" in error for error in errors)
-    assert any("INTEGRATIONS.md is missing discovery token: [mcp_servers.notestorelab]" in error for error in errors)
+    assert any("INTEGRATIONS.md is missing discovery token: [mcp_servers.noteyard]" in error for error in errors)
     assert any('INTEGRATIONS.md is missing discovery token: cwd = ".."' in error for error in errors)
     assert any("SUPPORT.md is missing discovery token: Codex" in error for error in errors)
 

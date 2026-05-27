@@ -98,7 +98,7 @@ def collect_publish_readiness_errors(repo_root: Path) -> list[str]:
         errors.append("server.json packages[0] is not an object")
         return errors
 
-    if server_payload.get("name") != "io.github.xiaojiou176-open/notestorelab-mcp":
+    if server_payload.get("name") != "io.github.xiaojiou176-open/noteyard-mcp":
         errors.append("server.json name drifted from the canonical MCP identifier")
 
     repository = server_payload.get("repository")
@@ -137,7 +137,7 @@ def build_and_check(repo_root: Path) -> dict[str, object]:
     except RuntimeError as exc:
         return {"ok": False, "errors": [str(exc)]}
 
-    with tempfile.TemporaryDirectory(prefix="notestorelab-pypi-dist-") as tmpdir:
+    with tempfile.TemporaryDirectory(prefix="noteyard-pypi-dist-") as tmpdir:
         out_dir = Path(tmpdir)
         build_result = _run(
             [build_python, "-m", "build", "--sdist", "--wheel", "--outdir", str(out_dir)],

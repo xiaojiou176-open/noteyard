@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NoteStore Lab | Copy-first Apple Notes recovery and review toolkit</title>
+    <title>Noteyard | Copy-first Apple Notes recovery and review toolkit</title>
     <meta
       name="description"
       content="Copy-first Apple Notes recovery and review toolkit for macOS, with AI-assisted triage, evidence-backed case Q&A, and a read-mostly MCP surface for Codex / Claude Code style local agent workflows."
     />
     <meta
       property="og:title"
-      content="NoteStore Lab | Copy-first Apple Notes recovery and review toolkit"
+      content="Noteyard | Copy-first Apple Notes recovery and review toolkit"
     />
     <meta
       property="og:description"
       content="Recovery and review stay primary. AI remains a bounded review layer, and MCP stays a local stdio-first protocol surface for builders and Codex / Claude Code style local agents."
     />
-    <meta property="og:site_name" content="NoteStore Lab" />
+    <meta property="og:site_name" content="Noteyard" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="assets/social/social-preview.png" />
@@ -29,7 +29,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="NoteStore Lab | Copy-first Apple Notes recovery and review toolkit"
+      content="Noteyard | Copy-first Apple Notes recovery and review toolkit"
     />
     <meta
       name="twitter:description"
@@ -39,7 +39,7 @@
     <meta name="twitter:url" content="https://xiaojiou176-open.github.io/noteyard/" />
     <meta name="theme-color" content="#16212b" />
     <link rel="canonical" href="https://xiaojiou176-open.github.io/noteyard/" />
-    <link rel="icon" type="image/svg+xml" href="assets/brand/notestorelab-mark.svg" />
+    <link rel="icon" type="image/svg+xml" href="assets/brand/noteyard-mark.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/brand/apple-touch-icon.png" />
     <link rel="manifest" href="site.webmanifest" />
@@ -50,7 +50,7 @@
       {
         "@context": "https://schema.org",
         "@type": "SoftwareSourceCode",
-        "name": "NoteStore Lab",
+        "name": "Noteyard",
         "codeRepository": "https://github.com/xiaojiou176-open/noteyard",
         "url": "https://xiaojiou176-open.github.io/noteyard/",
         "description": "Copy-first Apple Notes recovery and review toolkit for macOS, with AI-assisted triage, evidence-backed case Q&A, and a read-mostly MCP surface for Codex / Claude Code style local agent workflows.",
@@ -76,9 +76,9 @@
     <div class="site-shell">
       <header class="site-topbar fade-up">
         <div class="brand">
-          <img class="brand-mark" src="assets/brand/notestorelab-mark.svg" alt="" width="64" height="64" />
+          <img class="brand-mark" src="assets/brand/noteyard-mark.svg" alt="" width="64" height="64" />
           <div class="brand-copy">
-            <strong>NoteStore Lab</strong>
+            <strong>Noteyard</strong>
             <span>Repository identity: noteyard</span>
           </div>
         </div>
@@ -97,7 +97,7 @@
               <span class="kicker">Copy-first recovery · operator-first proof · builder lane second</span>
               <h1>Prove the copied-evidence workflow before you touch a real case.</h1>
               <p class="lede">
-                NoteStore Lab is a macOS Apple Notes recovery and review toolkit
+                Noteyard is a macOS Apple Notes recovery and review toolkit
                 built around copied case roots, reviewable outputs, bounded AI
                 assistance, and a local read-mostly MCP surface. The product
                 story is intentionally ordered: first prove the workflow shape,
@@ -299,7 +299,7 @@
                   Use the project <code>.codex/config.toml</code> shape and keep
                   the path base honest.
                 </p>
-                <pre><code>[mcp_servers.notestorelab]
+                <pre><code>[mcp_servers.noteyard]
 command = "../.venv/bin/python"
 args = [
   "-m",
@@ -320,7 +320,7 @@ cwd = ".."</code></pre>
                 </p>
                 <pre><code>{
   "mcpServers": {
-    "notestorelab": {
+    "noteyard": {
       "command": ".venv/bin/python",
       "args": [
         "-m",

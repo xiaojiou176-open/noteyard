@@ -38,7 +38,7 @@ security reporting.
 
 ## Scope Reminder
 
-NoteStore Lab is a local macOS forensic toolkit.
+Noteyard is a local macOS forensic toolkit.
 
 Support is limited to the repository, its documented workflows, and the public
 baseline or optional surfaces described in [README.md](./README.md) and

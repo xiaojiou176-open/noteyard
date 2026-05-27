@@ -17,7 +17,7 @@ def test_collect_skill_publish_errors_passes_for_repo_root() -> None:
 def test_canonical_and_derived_skill_files_match() -> None:
     repo_root = Path.cwd()
     canonical_text = (
-        repo_root / "skills" / "notestorelab-case-review" / "SKILL.md"
+        repo_root / "skills" / "noteyard-case-review" / "SKILL.md"
     ).read_text(encoding="utf-8")
 
     for rel_path in DERIVED_SKILL_PATHS:

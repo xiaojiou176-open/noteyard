@@ -1,4 +1,4 @@
-# NoteStore Lab
+# Noteyard
 
 > Copy-first Apple Notes recovery and review toolkit for macOS, with AI-assisted triage, evidence-backed case Q&A, and a read-mostly MCP surface for Codex / Claude Code style local agent workflows.
 
@@ -36,10 +36,10 @@
 - `notes-recovery plugins-validate`
 - `notes-recovery case-diff`
 - `notes-recovery-mcp`
-- `plugins/notestorelab-codex-plugin/`
-- `plugins/notestorelab-claude-plugin/`
+- `plugins/noteyard-codex-plugin/`
+- `plugins/noteyard-claude-plugin/`
 - `.claude-plugin/marketplace.json`
-- `skills/notestorelab-case-review/`
+- `skills/noteyard-case-review/`
 - `server.json`
 - GitHub Pages landing at `/`
 
@@ -63,7 +63,7 @@
 - Codex and Claude Code are both good current examples of hosts that fit the shipped local stdio MCP surface here.
 - Keep the same local stdio command as the source of truth even when each host wraps it differently.
 - INTEGRATIONS.md still includes the minimal `.mcp.json` wrapper example, and `DISTRIBUTION.md` tracks the current PyPI lane contract, shipped plugin bundles, marketplace manifest, and MCP Registry boundary without turning them into permanent live claims.
-- The tracked Codex bundle includes `.codex-plugin/plugin.json`, a local marketplace example, and the bundled MCP launcher under `plugins/notestorelab-codex-plugin/`.
+- The tracked Codex bundle includes `.codex-plugin/plugin.json`, a local marketplace example, and the bundled MCP launcher under `plugins/noteyard-codex-plugin/`.
 - When you need the literal project config token, the tracked Codex example still maps to `.codex/config.toml` through the bundle layout.
 - Treat remote-connector-first hosts as comparison paths here because this repo does not ship a hosted or remote MCP deployment.
 - OpenClaw-style hosts can now consume a shipped compatible bundle, but this repo still does not claim an official listing.

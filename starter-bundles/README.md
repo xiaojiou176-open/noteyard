@@ -1,7 +1,7 @@
-# NoteStore Lab Starter Bundles
+# Noteyard Starter Bundles
 
 This directory contains repo-owned companion starter artifacts for the current
-host surfaces around NoteStore Lab.
+host surfaces around Noteyard.
 
 These bundles do not claim official listing unless the target platform already
 shows one on its public surface. The goal is simpler:
@@ -11,7 +11,7 @@ shows one on its public surface. The goal is simpler:
 - give developers a real proof loop instead of prose-only examples
 
 The canonical independent skill surface now lives at
-`skills/notestorelab-case-review/`. Any skill file inside these starter bundles
+`skills/noteyard-case-review/`. Any skill file inside these starter bundles
 is a host-specific derived copy, not the primary source of truth.
 
 ## Included bundles
@@ -19,7 +19,7 @@ is a host-specific derived copy, not the primary source of truth.
 | Bundle | Surface | What it gives you | Truth boundary |
 | --- | --- | --- | --- |
 | `codex/` | Codex local/plugin marketplace starter | a tracked `.codex/config.toml` example plus a plugin-format bundle you can load through a local Codex marketplace | public-ready starter only, not an official Codex Plugin Directory listing |
-| `claude-code/` | Claude Code plugin + marketplace starter | a marketplace-format root and a minimal plugin that packages NoteStore Lab onboarding as a Claude Code plugin surface | plugin-ready starter only, not already listed in an Anthropic-managed marketplace |
+| `claude-code/` | Claude Code plugin + marketplace starter | a marketplace-format root and a minimal plugin that packages Noteyard onboarding as a Claude Code plugin surface | plugin-ready starter only, not already listed in an Anthropic-managed marketplace |
 | `openclaw/` | OpenClaw comparison-path starter | a sample MCP config and a workspace skill starter for OpenClaw-compatible local installs | comparison-path starter only, not an official OpenClaw listing or ClawHub publication |
 
 ## Allowed claims

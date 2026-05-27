@@ -1,6 +1,6 @@
 # Distribution Surface
 
-This file is the exact claim boundary for NoteStore Lab's public distribution
+This file is the exact claim boundary for Noteyard's public distribution
 story.
 
 Treat it as a later-lane ledger, not as the repo's front-door product sentence.
@@ -19,10 +19,10 @@ Use it when you need to answer:
 | --- | --- | --- | --- | --- |
 | MCP Registry | yes, the official MCP Registry exists and is still documented as a preview surface | yes: `server.json` and `notes-recovery-mcp` | current pure-MCP companion lane | fresh registry read-back exists for the current package lane, but keep the front door on the local case-root workflow instead of leading with registry status |
 | Cline MCP Marketplace | yes, the public intake issue lane exists | yes: `server.json`, `README.md`, and repo-root install proof are already aligned to the current stdio-first MCP story | companion review lane | the intake is submitted on [`cline/mcp-marketplace#1324`](https://github.com/cline/mcp-marketplace/issues/1324), but it is still review-pending and not listed live |
-| Codex | yes, the official Codex plugin directory exists, but third-party official-directory submission is still coming soon | yes: `plugins/notestorelab-codex-plugin/` | companion plugin lane | repo-owned Codex bundle shipped; do not claim official Codex directory listing |
-| Claude Code | yes, official plugin and marketplace surfaces exist | yes: `plugins/notestorelab-claude-plugin/` plus root `.claude-plugin/marketplace.json` | companion plugin lane | repo-owned Claude plugin and marketplace metadata shipped; do not claim Anthropic-managed listing without fresh read-back |
-| OpenClaw | yes, the official ClawHub public registry exists | yes: `plugins/notestorelab-openclaw-bundle/` | comparison-path companion lane | the secondary ClawHub public-skill listing is live, but the shipped OpenClaw-compatible bundle still does not prove an official OpenClaw listing or first-class host wrapper acceptance |
-| OpenHands/extensions | yes, the official OpenHands public extensions registry exists | yes: `public-skills/notestorelab-case-review/` plus canonical `skills/notestorelab-case-review/` | portable public skill lane | public skill folder shipped; the current thread is submission-done plus changes-requested, so do not claim a live OpenHands/extensions listing until maintainer acceptance lands |
+| Codex | yes, the official Codex plugin directory exists, but third-party official-directory submission is still coming soon | yes: `plugins/noteyard-codex-plugin/` | companion plugin lane | repo-owned Codex bundle shipped; do not claim official Codex directory listing |
+| Claude Code | yes, official plugin and marketplace surfaces exist | yes: `plugins/noteyard-claude-plugin/` plus root `.claude-plugin/marketplace.json` | companion plugin lane | repo-owned Claude plugin and marketplace metadata shipped; do not claim Anthropic-managed listing without fresh read-back |
+| OpenClaw | yes, the official ClawHub public registry exists | yes: `plugins/noteyard-openclaw-bundle/` | comparison-path companion lane | the secondary ClawHub public-skill listing is live, but the shipped OpenClaw-compatible bundle still does not prove an official OpenClaw listing or first-class host wrapper acceptance |
+| OpenHands/extensions | yes, the official OpenHands public extensions registry exists | yes: `public-skills/noteyard-case-review/` plus canonical `skills/noteyard-case-review/` | portable public skill lane | public skill folder shipped; the current thread is submission-done plus changes-requested, so do not claim a live OpenHands/extensions listing until maintainer acceptance lands |
 | Glama | yes, the public Add Server and hosted MCP surface exists | yes: `glama.json`, `Dockerfile`, and the canonical GHCR target | Wave 2 metadata prep | repo-owned Glama metadata and Docker-facing inputs shipped; do not claim a live Glama listing without fresh Glama-side read-back |
 | Docker MCP Catalog | yes, the official curated Docker MCP Catalog exists | yes: `Dockerfile`, `scripts/release/check_docker_surface.py`, and the canonical GHCR target | Wave 2 container/catalog prep | Docker-facing container inputs shipped; do not claim a live Docker catalog listing without fresh Docker-side submission/read-back |
 
@@ -30,11 +30,11 @@ Use it when you need to answer:
 
 ### Stronger distribution artifacts
 
-- `plugins/notestorelab-codex-plugin/`
-- `plugins/notestorelab-claude-plugin/`
-- `plugins/notestorelab-openclaw-bundle/`
-- `skills/notestorelab-case-review/`
-- `public-skills/notestorelab-case-review/`
+- `plugins/noteyard-codex-plugin/`
+- `plugins/noteyard-claude-plugin/`
+- `plugins/noteyard-openclaw-bundle/`
+- `skills/noteyard-case-review/`
+- `public-skills/noteyard-case-review/`
 - `.claude-plugin/marketplace.json`
 - `glama.json`
 - `server.json`
@@ -51,7 +51,7 @@ Use it when you need to answer:
 ## Independent Skill Surface
 
 The canonical independent skill surface now lives at
-`skills/notestorelab-case-review/`.
+`skills/noteyard-case-review/`.
 
 That directory is the single repo-owned SSOT for the skill package:
 
@@ -64,11 +64,11 @@ shipped" or "independent skill ready" without claiming any official directory
 listing.
 
 For public skill-folder registries, the portable listing packet now lives at
-`public-skills/notestorelab-case-review/`.
+`public-skills/noteyard-case-review/`.
 
 That packet is intentionally separate from the canonical skill SSOT:
 
-- canonical truth still lives in `skills/notestorelab-case-review/`
+- canonical truth still lives in `skills/noteyard-case-review/`
 - the public packet adds semver-ready listing metadata for ClawHub-style
   publication
 - the public packet adds an OpenHands/extensions-facing README so external
@@ -136,7 +136,7 @@ Do not claim a live Glama listing without fresh Glama-side read-back.
 ### Claude Code plugin validation
 
 ```bash
-claude plugin validate plugins/notestorelab-claude-plugin
+claude plugin validate plugins/noteyard-claude-plugin
 claude plugin validate .
 ```
 
@@ -144,7 +144,7 @@ claude plugin validate .
 
 ```bash
 ./.venv/bin/python scripts/release/build_distribution_bundles.py --out-dir ./dist
-./.venv/bin/python scripts/release/build_starter_bundles_bundle.py --out ./dist/notestorelab-host-starters.zip
+./.venv/bin/python scripts/release/build_starter_bundles_bundle.py --out ./dist/noteyard-host-starters.zip
 ```
 
 ### MCP Registry descriptor boundary
@@ -162,7 +162,7 @@ The repo-side publish-readiness proof command is:
 
 ## Allowed Claims
 
-- "`server.json` captures the current stdio-first MCP descriptor for NoteStore Lab"
+- "`server.json` captures the current stdio-first MCP descriptor for Noteyard"
 - "the Cline MCP Marketplace intake is submitted and review-pending on `cline/mcp-marketplace#1324`"
 - "PyPI is the canonical installable package surface for this repository today"
 - "public-ready Codex plugin bundle shipped"

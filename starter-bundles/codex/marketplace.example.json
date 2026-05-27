@@ -1,15 +1,15 @@
 {
-  "name": "notestorelab-starters",
+  "name": "noteyard-starters",
   "interface": {
-    "displayName": "NoteStore Lab Local Plugins"
+    "displayName": "Noteyard Local Plugins"
   },
   "marketplaces": [
     {
-      "name": "notestorelab-local",
+      "name": "noteyard-local",
       "plugins": [
         {
-          "name": "notestorelab",
-          "path": "plugins/notestorelab"
+          "name": "noteyard",
+          "path": "plugins/noteyard"
         }
       ]
     }

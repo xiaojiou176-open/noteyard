@@ -253,7 +253,7 @@ Start with the baseline smoke contract:
 tmp=$(mktemp)
 .venv/bin/notes-recovery demo > "$tmp"
 test -s "$tmp"
-grep -q "NoteStore Lab public demo" "$tmp"
+grep -q "Noteyard public demo" "$tmp"
 .venv/bin/python -m pytest \
   tests/test_cli_entrypoints.py \
   tests/test_public_demo_command.py \

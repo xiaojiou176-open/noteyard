@@ -28,9 +28,9 @@ jobs:
       - name: Baseline smoke
         run: |
           notes-recovery --help >/dev/null
-          notes-recovery demo | tee /tmp/notestorelab-demo.txt
-          test -s /tmp/notestorelab-demo.txt
-          grep -q "NoteStore Lab public demo" /tmp/notestorelab-demo.txt
+          notes-recovery demo | tee /tmp/noteyard-demo.txt
+          test -s /tmp/noteyard-demo.txt
+          grep -q "Noteyard public demo" /tmp/noteyard-demo.txt
           python -m pytest \
             tests/test_cli_entrypoints.py \
             tests/test_public_demo_command.py \
@@ -205,7 +205,7 @@ jobs:
       - name: Check GitHub security alerts
         env:
           GH_TOKEN: ${{ github.token }}
-          NOTESTORELAB_ALLOW_SECRET_SCANNING_FALLBACK: "1"
+          NOTEYARD_ALLOW_SECRET_SCANNING_FALLBACK: "1"
         run: python scripts/ci/check_github_security_alerts.py --repo xiaojiou176-open/noteyard
       - name: Check repository hygiene
         run: python scripts/ci/check_repo_hygiene.py --mode hygiene

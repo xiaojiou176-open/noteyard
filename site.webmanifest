@@ -1,6 +1,6 @@
 {
-  "name": "NoteStore Lab",
-  "short_name": "NoteStore Lab",
+  "name": "Noteyard",
+  "short_name": "Noteyard",
   "description": "Copy-first Apple Notes recovery and review toolkit for macOS.",
   "start_url": "/noteyard/",
   "scope": "/noteyard/",

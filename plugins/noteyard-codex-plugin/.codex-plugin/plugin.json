@@ -1,0 +1,39 @@
+{
+  "name": "noteyard-codex-plugin",
+  "version": "0.1.0.post1",
+  "description": "Case-root review workflow and bounded MCP launcher for Noteyard.",
+  "author": {
+    "name": "Noteyard contributors",
+    "url": "https://github.com/xiaojiou176-open/noteyard"
+  },
+  "homepage": "https://github.com/xiaojiou176-open/noteyard",
+  "repository": "https://github.com/xiaojiou176-open/noteyard",
+  "license": "MIT",
+  "keywords": [
+    "apple-notes",
+    "forensics",
+    "mcp",
+    "local-first",
+    "case-review"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Noteyard",
+    "shortDescription": "Review one Apple Notes case root with bounded MCP help.",
+    "longDescription": "Bundle the Noteyard review workflow, one-case-root-at-a-time MCP launcher, and a case-review skill without turning the repo into a hosted platform.",
+    "developerName": "Noteyard contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://github.com/xiaojiou176-open/noteyard",
+    "privacyPolicyURL": "https://github.com/xiaojiou176-open/noteyard/blob/main/SECURITY.md",
+    "termsOfServiceURL": "https://github.com/xiaojiou176-open/noteyard/blob/main/LICENSE",
+    "defaultPrompt": [
+      "Use Noteyard to inspect the review_index before forming conclusions.",
+      "Use Noteyard to answer one bounded question from derived artifacts, not the live Notes store."
+    ],
+    "brandColor": "#0f766e"
+  }
+}

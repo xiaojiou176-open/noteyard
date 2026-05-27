@@ -45,12 +45,12 @@ def handle_demo_command(
 
     missing = [path for path in required_paths if not path.exists()]
     if missing:
-        print("NoteStore Lab public demo is unavailable because tracked demo artifacts are missing:")
+        print("Noteyard public demo is unavailable because tracked demo artifacts are missing:")
         for path in missing:
             print(f"- {path}")
         return ExitCode.ERROR.value
 
-    print("NoteStore Lab public demo")
+    print("Noteyard public demo")
     print("")
     print("Zero-risk first look for the copy-first Apple Notes recovery workflow.")
     print("Nothing in this command touches private evidence or a live Notes store.")

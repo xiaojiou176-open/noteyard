@@ -11,21 +11,21 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 BUNDLE_SPECS = (
     {
         "key": "codex",
-        "archive_name": "notestorelab-codex-plugin-v0.1.0.zip",
-        "root_name": "notestorelab-codex-plugin",
-        "source_dir": REPO_ROOT / "plugins" / "notestorelab-codex-plugin",
+        "archive_name": "noteyard-codex-plugin-v0.1.0.zip",
+        "root_name": "noteyard-codex-plugin",
+        "source_dir": REPO_ROOT / "plugins" / "noteyard-codex-plugin",
     },
     {
         "key": "claude",
-        "archive_name": "notestorelab-claude-plugin-v0.1.0.zip",
-        "root_name": "notestorelab-claude-plugin",
-        "source_dir": REPO_ROOT / "plugins" / "notestorelab-claude-plugin",
+        "archive_name": "noteyard-claude-plugin-v0.1.0.zip",
+        "root_name": "noteyard-claude-plugin",
+        "source_dir": REPO_ROOT / "plugins" / "noteyard-claude-plugin",
     },
     {
         "key": "openclaw",
-        "archive_name": "notestorelab-openclaw-bundle-v0.1.0.zip",
-        "root_name": "notestorelab-openclaw-bundle",
-        "source_dir": REPO_ROOT / "plugins" / "notestorelab-openclaw-bundle",
+        "archive_name": "noteyard-openclaw-bundle-v0.1.0.zip",
+        "root_name": "noteyard-openclaw-bundle",
+        "source_dir": REPO_ROOT / "plugins" / "noteyard-openclaw-bundle",
     },
 )
 

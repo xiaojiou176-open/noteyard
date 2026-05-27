@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.xiaojiou176-open/notestorelab-mcp",
-  "title": "NoteStore Lab MCP",
-  "description": "Local stdio MCP review surface for explicit NoteStore Lab Apple Notes case roots.",
+  "name": "io.github.xiaojiou176-open/noteyard-mcp",
+  "title": "Noteyard MCP",
+  "description": "Local stdio MCP review surface for explicit Noteyard Apple Notes case roots.",
   "repository": {
     "url": "https://github.com/xiaojiou176-open/noteyard",
     "source": "github"
