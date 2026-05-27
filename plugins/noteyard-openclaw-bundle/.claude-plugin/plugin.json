@@ -1,9 +1,9 @@
 {
-  "name": "noteyard-openclaw-bundle",
+  "name": "notes-recover-openclaw-bundle",
   "description": "Comparison-path MCP launcher and workspace skill bundle for OpenClaw-style hosts.",
   "version": "0.1.0",
   "author": {
-    "name": "Noteyard contributors"
+    "name": "NotesRecover contributors"
   },
   "mcpServers": "./.mcp.json"
 }

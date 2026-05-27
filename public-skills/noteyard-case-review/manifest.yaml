@@ -2,8 +2,8 @@ schema_version: 1
 artifact: public-skill-listing-manifest
 
 skill:
-  name: noteyard-case-review
-  display_name: Noteyard Case Review
+  name: notes-recover-case-review
+  display_name: NotesRecover Case Review
   version: 1.0.2
   entrypoint: SKILL.md
   package_shape: skill-folder
@@ -11,21 +11,21 @@ skill:
 registry_targets:
   clawhub:
     status: listed-live
-    live_read_back: https://clawhub.ai/xiaojiou176/noteyard-case-review
+    live_read_back: https://clawhub.ai/xiaojiou176/notes-recover-case-review
     package_shape: skill-folder
-    submit_via: clawhub publish . --slug noteyard-case-review --name "Noteyard Case Review" --version 1.0.2 --tags apple-notes,forensics,incident-response,mcp
+    submit_via: clawhub publish . --slug notes-recover-case-review --name "NotesRecover Case Review" --version 1.0.2 --tags apple-notes,forensics,incident-response,mcp
   openhands-extensions:
     status: submission-done-platform-not-accepted-yet
     review_state: changes-requested
     package_shape: skill-folder
-    submit_via: submit this folder as skills/noteyard-case-review/ in OpenHands/extensions
+    submit_via: submit this folder as skills/notes-recover-case-review/ in OpenHands/extensions
 
 boundaries:
-  product_identity: Copy-first Apple Notes case review skill for Noteyard.
+  product_identity: Copy-first Apple Notes case review skill for NotesRecover.
   canonical_repo_version: 0.1.0.post1
   official_listing_state: clawhub-listed-live-openhands-submission-done
   confirmed_live:
-    - ClawHub public skill listing is live at https://clawhub.ai/xiaojiou176/noteyard-case-review
+    - ClawHub public skill listing is live at https://clawhub.ai/xiaojiou176/notes-recover-case-review
   not_claimed:
     - No live OpenHands/extensions listing exists yet
     - No hosted Glama deployment exists yet

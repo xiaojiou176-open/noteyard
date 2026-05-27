@@ -2,8 +2,8 @@
 
 ## Repository Identity
 
-- Project: Noteyard
-- Canonical public repo: `xiaojiou176-open/noteyard`
+- Project: NotesRecover
+- Canonical public repo: `xiaojiou176-open/notes-recover`
 - Primary entrypoint: `notes-recovery`
 - Host boundary: macOS only
 - Working style: operate on copied evidence, never the live Notes store

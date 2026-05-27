@@ -88,7 +88,7 @@ def test_host_safety_contract_allows_warning_text_in_docs(tmp_path: Path) -> Non
     _write_minimal_host_safety_surface(tmp_path)
     _write(
         tmp_path / "README.md",
-        "# Noteyard\nHost Safety Boundary\ncopied-evidence workbench\nAvoid killall, pkill, osascript, AppleEvent, and loginwindow flows.\n",
+        "# NotesRecover\nHost Safety Boundary\ncopied-evidence workbench\nAvoid killall, pkill, osascript, AppleEvent, and loginwindow flows.\n",
     )
     _write(tmp_path / "notes_recovery" / "services" / "safe.py", "def safe() -> str:\n    return 'ok'\n")
 

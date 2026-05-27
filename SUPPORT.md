@@ -38,7 +38,7 @@ security reporting.
 
 ## Scope Reminder
 
-Noteyard is a local macOS forensic toolkit.
+NotesRecover is a local macOS forensic toolkit.
 
 Support is limited to the repository, its documented workflows, and the public
 baseline or optional surfaces described in [README.md](./README.md) and
@@ -46,9 +46,9 @@ baseline or optional surfaces described in [README.md](./README.md) and
 
 Useful public entrypoints:
 
-- Repository overview: <https://github.com/xiaojiou176-open/noteyard>
-- Issue tracker: <https://github.com/xiaojiou176-open/noteyard/issues>
-- Release feed: <https://github.com/xiaojiou176-open/noteyard/releases>
+- Repository overview: <https://github.com/xiaojiou176-open/notes-recover>
+- Issue tracker: <https://github.com/xiaojiou176-open/notes-recover/issues>
+- Release feed: <https://github.com/xiaojiou176-open/notes-recover/releases>
 
 Storefront settings such as GitHub description, topics, custom social preview,
 and release-page copy remain maintainer-managed manual actions. Treat them as

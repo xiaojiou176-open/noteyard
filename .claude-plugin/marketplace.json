@@ -1,23 +1,23 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "noteyard-plugins",
+  "name": "notes-recover-plugins",
   "owner": {
-    "name": "Noteyard",
+    "name": "NotesRecover",
     "email": "xiaojiou176@users.noreply.github.com"
   },
   "metadata": {
-    "description": "Git-backed Claude Code marketplace for the Noteyard public-ready plugin surface."
+    "description": "Git-backed Claude Code marketplace for the NotesRecover public-ready plugin surface."
   },
   "plugins": [
     {
-      "name": "noteyard-claude-plugin",
-      "description": "Bounded case-root MCP launcher for Noteyard review workflows.",
+      "name": "notes-recover-claude-plugin",
+      "description": "Bounded case-root MCP launcher for NotesRecover review workflows.",
       "version": "0.1.0.post1",
       "author": {
-        "name": "Noteyard",
+        "name": "NotesRecover",
         "email": "xiaojiou176@users.noreply.github.com"
       },
-      "source": "./plugins/noteyard-claude-plugin",
+      "source": "./plugins/notes-recover-claude-plugin",
       "category": "developer-tools",
       "strict": false
     }

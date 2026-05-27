@@ -1,4 +1,4 @@
-# Noteyard Troubleshooting
+# NotesRecover Troubleshooting
 
 Use this page when the packet looks right on paper but the first attach or
 case-root review still fails.

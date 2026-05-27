@@ -11,21 +11,21 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 BUNDLE_SPECS = (
     {
         "key": "codex",
-        "archive_name": "noteyard-codex-plugin-v0.1.0.zip",
-        "root_name": "noteyard-codex-plugin",
-        "source_dir": REPO_ROOT / "plugins" / "noteyard-codex-plugin",
+        "archive_name": "notes-recover-codex-plugin-v0.1.0.zip",
+        "root_name": "notes-recover-codex-plugin",
+        "source_dir": REPO_ROOT / "plugins" / "notes-recover-codex-plugin",
     },
     {
         "key": "claude",
-        "archive_name": "noteyard-claude-plugin-v0.1.0.zip",
-        "root_name": "noteyard-claude-plugin",
-        "source_dir": REPO_ROOT / "plugins" / "noteyard-claude-plugin",
+        "archive_name": "notes-recover-claude-plugin-v0.1.0.zip",
+        "root_name": "notes-recover-claude-plugin",
+        "source_dir": REPO_ROOT / "plugins" / "notes-recover-claude-plugin",
     },
     {
         "key": "openclaw",
-        "archive_name": "noteyard-openclaw-bundle-v0.1.0.zip",
-        "root_name": "noteyard-openclaw-bundle",
-        "source_dir": REPO_ROOT / "plugins" / "noteyard-openclaw-bundle",
+        "archive_name": "notes-recover-openclaw-bundle-v0.1.0.zip",
+        "root_name": "notes-recover-openclaw-bundle",
+        "source_dir": REPO_ROOT / "plugins" / "notes-recover-openclaw-bundle",
     },
 )
 

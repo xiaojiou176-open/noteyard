@@ -1,11 +1,11 @@
 {
   "mcp": {
     "servers": {
-      "noteyard": {
+      "notes-recover": {
         "command": "uvx",
         "args": [
           "--from",
-          "noteyard==0.1.0.post1",
+          "notes-recover==0.1.0.post1",
           "notes-recovery-mcp",
           "--case-dir",
           "./output/Notes_Forensics_<run_ts>"

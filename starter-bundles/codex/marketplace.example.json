@@ -1,15 +1,15 @@
 {
-  "name": "noteyard-starters",
+  "name": "notes-recover-starters",
   "interface": {
-    "displayName": "Noteyard Local Plugins"
+    "displayName": "NotesRecover Local Plugins"
   },
   "marketplaces": [
     {
-      "name": "noteyard-local",
+      "name": "notes-recover-local",
       "plugins": [
         {
-          "name": "noteyard",
-          "path": "plugins/noteyard"
+          "name": "notes-recover",
+          "path": "plugins/notes-recover"
         }
       ]
     }

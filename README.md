@@ -2,16 +2,16 @@
   <img src="https://em-content.zobj.net/source/apple/391/memo_1f4dd.png" width="120" alt="memo" />
 </p>
 
-<h1 align="center">noteyard</h1>
+<h1 align="center">notes-recover</h1>
 
 <p align="center">
   <strong>your Apple Notes never really die</strong>
 </p>
 
 <p align="center">
-  <a href="https://github.com/xiaojiou176-open/noteyard/stargazers"><img src="https://img.shields.io/github/stars/xiaojiou176-open/noteyard?style=flat&color=yellow" alt="Stars"></a>
-  <a href="https://github.com/xiaojiou176-open/noteyard/commits/main"><img src="https://img.shields.io/github/last-commit/xiaojiou176-open/noteyard?style=flat" alt="Last Commit"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/xiaojiou176-open/noteyard?style=flat" alt="License"></a>
+  <a href="https://github.com/xiaojiou176-open/notes-recover/stargazers"><img src="https://img.shields.io/github/stars/xiaojiou176-open/notes-recover?style=flat&color=yellow" alt="Stars"></a>
+  <a href="https://github.com/xiaojiou176-open/notes-recover/commits/main"><img src="https://img.shields.io/github/last-commit/xiaojiou176-open/notes-recover?style=flat" alt="Last Commit"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/xiaojiou176-open/notes-recover?style=flat" alt="License"></a>
 </p>
 
 <p align="center">
@@ -23,7 +23,7 @@
 
 ---
 
-noteyard is a forensic-grade reader for Apple Notes. Recover deleted notes, browse the raw NoteStore, and ship audit-ready bundles. Nothing leaves your machine.
+notes-recover is a forensic-grade reader for Apple Notes. Recover deleted notes, browse the raw NoteStore, and ship audit-ready bundles. Nothing leaves your machine.
 
 ```
 ┌──────────────────────────────────────┐
@@ -52,14 +52,14 @@ noteyard is a forensic-grade reader for Apple Notes. Recover deleted notes, brow
 ## Install
 
 ```bash
-git clone https://github.com/xiaojiou176-open/noteyard.git
-cd noteyard
+git clone https://github.com/xiaojiou176-open/notes-recover.git
+cd notes-recover
 # follow the per-stack quickstart in INSTALL.md or docs/
 ```
 
 Three commands. No `curl | sh`. No login. Read what you run.
 
-Install break? Open your favorite agent and say *"Read AGENTS.md and bootstrap noteyard for me."* Agent fix own brain. Long version: [`docs/`](./docs/).
+Install break? Open your favorite agent and say *"Read AGENTS.md and bootstrap notes-recover for me."* Agent fix own brain. Long version: [`docs/`](./docs/).
 
 ## How It Work
 
@@ -68,7 +68,7 @@ The repo is seven layers — exactly the seven commits in `git log`. New work go
 | Layer | What |
 |---|---|
 | `chore: scaffold` | License, governance, hygiene gates, CI scaffolding. |
-| `feat(core)` | The primary engine. The reason noteyard exists. |
+| `feat(core)` | The primary engine. The reason notes-recover exists. |
 | `feat(modules)` | Packages, adapters, services, plugins. The second floor. |
 | `feat(contracts)` | Schemas, configs, public boundaries. Other code talks here. |
 | `test:` | Receipts. Everything in this layer must run. |
@@ -79,13 +79,13 @@ The repo is seven layers — exactly the seven commits in `git log`. New work go
 
 ## Ecosystem
 
-noteyard lives in the **yard family**: seven yards. one philosophy: structured input, structured output, structured proof.
+notes-recover lives in the **yard family**: seven yards. one philosophy: structured input, structured output, structured proof.
 
 | Repo | What |
 |---|---|
 | [**switchyard**](https://github.com/xiaojiou176-open/switchyard) | model & agent runtime switch board |
 | [**browserclickyard**](https://github.com/xiaojiou176-open/browserclickyard) | your AI clicks, your browser obeys |
-| [**noteyard**](https://github.com/xiaojiou176-open/noteyard) *(you here)* | your Apple Notes never really die |
+| [**notes-recover**](https://github.com/xiaojiou176-open/notes-recover) *(you here)* | your Apple Notes never really die |
 | [**dealyard**](https://github.com/xiaojiou176-open/dealyard) | let prices fight, you sit and watch |
 | [**docyard**](https://github.com/xiaojiou176-open/docyard) | docs site in, markdown out, no scraping by hand |
 | [**fileyard**](https://github.com/xiaojiou176-open/fileyard) | messy folders in, organized library out |
@@ -99,9 +99,9 @@ Cross-family taste:
 
 ## Star This Repo
 
-If noteyard saves you a click, an hour, or a headache — star costs zero. Fair trade. ⭐
+If notes-recover saves you a click, an hour, or a headache — star costs zero. Fair trade. ⭐
 
-[![Star History Chart](https://api.star-history.com/svg?repos=xiaojiou176-open/noteyard&type=Date)](https://star-history.com/#xiaojiou176-open/noteyard&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=xiaojiou176-open/notes-recover&type=Date)](https://star-history.com/#xiaojiou176-open/notes-recover&Date)
 
 ## Also by Yifeng[Terry] Yu
 

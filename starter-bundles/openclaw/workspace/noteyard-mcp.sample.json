@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "noteyard": {
+    "notes-recover": {
       "command": "notes-recovery-mcp",
       "args": [
         "--cases-root",

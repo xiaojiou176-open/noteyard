@@ -1,17 +1,17 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.xiaojiou176-open/noteyard-mcp",
-  "title": "Noteyard MCP",
-  "description": "Local stdio MCP review surface for explicit Noteyard Apple Notes case roots.",
+  "name": "io.github.xiaojiou176-open/notes-recover-mcp",
+  "title": "NotesRecover MCP",
+  "description": "Local stdio MCP review surface for explicit NotesRecover Apple Notes case roots.",
   "repository": {
-    "url": "https://github.com/xiaojiou176-open/noteyard",
+    "url": "https://github.com/xiaojiou176-open/notes-recover",
     "source": "github"
   },
   "version": "0.1.0.post1",
   "packages": [
     {
       "registryType": "pypi",
-      "identifier": "noteyard",
+      "identifier": "notes-recover",
       "version": "0.1.0.post1",
       "transport": {
         "type": "stdio"

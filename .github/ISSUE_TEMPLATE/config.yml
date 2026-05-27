@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
   - name: Repository overview
-    url: https://github.com/xiaojiou176-open/noteyard
+    url: https://github.com/xiaojiou176-open/notes-recover
     about: Start with the root README if you are evaluating the project from the outside.
   - name: Security report
-    url: https://github.com/xiaojiou176-open/noteyard/security/advisories/new
+    url: https://github.com/xiaojiou176-open/notes-recover/security/advisories/new
     about: Use GitHub Security Advisories for private vulnerability reporting.
   - name: Support guide
-    url: https://github.com/xiaojiou176-open/noteyard/blob/main/SUPPORT.md
+    url: https://github.com/xiaojiou176-open/notes-recover/blob/main/SUPPORT.md
     about: Read the support guide before opening a public issue.

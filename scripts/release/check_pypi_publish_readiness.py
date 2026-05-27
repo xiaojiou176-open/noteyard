@@ -98,14 +98,14 @@ def collect_publish_readiness_errors(repo_root: Path) -> list[str]:
         errors.append("server.json packages[0] is not an object")
         return errors
 
-    if server_payload.get("name") != "io.github.xiaojiou176-open/noteyard-mcp":
+    if server_payload.get("name") != "io.github.xiaojiou176-open/notes-recover-mcp":
         errors.append("server.json name drifted from the canonical MCP identifier")
 
     repository = server_payload.get("repository")
     if not isinstance(repository, dict):
         errors.append("server.json is missing repository metadata")
     else:
-        if repository.get("url") != "https://github.com/xiaojiou176-open/noteyard":
+        if repository.get("url") != "https://github.com/xiaojiou176-open/notes-recover":
             errors.append("server.json repository.url must point at the canonical GitHub repository")
         if repository.get("source") != "github":
             errors.append("server.json repository.source must be github")
@@ -137,7 +137,7 @@ def build_and_check(repo_root: Path) -> dict[str, object]:
     except RuntimeError as exc:
         return {"ok": False, "errors": [str(exc)]}
 
-    with tempfile.TemporaryDirectory(prefix="noteyard-pypi-dist-") as tmpdir:
+    with tempfile.TemporaryDirectory(prefix="notes-recover-pypi-dist-") as tmpdir:
         out_dir = Path(tmpdir)
         build_result = _run(
             [build_python, "-m", "build", "--sdist", "--wheel", "--outdir", str(out_dir)],

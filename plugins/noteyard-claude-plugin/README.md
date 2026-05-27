@@ -1,4 +1,4 @@
-# Noteyard Claude Code Plugin
+# NotesRecover Claude Code Plugin
 
 This directory is a Claude Code companion bundle for later host-specific
 installs. It is not the repo's flagship public lane, and it is not proof of an
@@ -14,12 +14,12 @@ It bundles:
 
 Set these before you enable the plugin:
 
-- `NOTEYARD_REPO_ROOT`
-- `NOTEYARD_CASE_DIR`
-- optional: `NOTEYARD_PYTHON`
+- `NOTES_RECOVER_REPO_ROOT`
+- `NOTES_RECOVER_CASE_DIR`
+- optional: `NOTES_RECOVER_PYTHON`
 
-The bundled launcher uses `NOTEYARD_PYTHON` when present. Otherwise it
-falls back to `$NOTEYARD_REPO_ROOT/.venv/bin/python`.
+The bundled launcher uses `NOTES_RECOVER_PYTHON` when present. Otherwise it
+falls back to `$NOTES_RECOVER_REPO_ROOT/.venv/bin/python`.
 
 ## Public Distribution Surface
 
@@ -29,8 +29,8 @@ itself can be added as a Claude Code marketplace.
 Example:
 
 ```bash
-claude plugin marketplace add xiaojiou176-open/noteyard
-claude plugin install noteyard-claude-plugin@noteyard-plugins
+claude plugin marketplace add xiaojiou176-open/notes-recover
+claude plugin install notes-recover-claude-plugin@notes-recover-plugins
 ```
 
 This plugin directory is also the source used for the OpenClaw-compatible

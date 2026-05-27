@@ -1,13 +1,13 @@
 {
-  "name": "noteyard",
+  "name": "notes-recover",
   "version": "0.1.0",
-  "description": "Marketplace-ready starter plugin for the local Noteyard MCP workflow on copied-evidence case roots.",
+  "description": "Marketplace-ready starter plugin for the local NotesRecover MCP workflow on copied-evidence case roots.",
   "author": {
-    "name": "Noteyard",
-    "email": "support@noteyard.local"
+    "name": "NotesRecover",
+    "email": "support@notes-recover.local"
   },
   "mcp_config": ".mcp.json",
   "skills": [
-    "skills/noteyard-mcp/SKILL.md"
+    "skills/notes-recover-mcp/SKILL.md"
   ]
 }

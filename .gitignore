@@ -77,3 +77,6 @@ output/
 .claude/sessions/
 **/rollout-*.jsonl
 **/session-*.jsonl
+
+# .archive/ 全部 ignore（5/27 v3 加固）
+.archive/

@@ -1,12 +1,12 @@
 {
-  "name": "noteyard-starters",
+  "name": "notes-recover-starters",
   "owner": {
-    "name": "Noteyard"
+    "name": "NotesRecover"
   },
   "plugins": [
     {
-      "name": "noteyard",
-      "source": "plugins/noteyard"
+      "name": "notes-recover",
+      "source": "plugins/notes-recover"
     }
   ]
 }

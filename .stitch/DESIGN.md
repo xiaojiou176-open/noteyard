@@ -1,4 +1,4 @@
-# Noteyard Design Canon
+# NotesRecover Design Canon
 
 This file is the visual source of truth for every public and local UI surface
 in this repository. The goal is not to invent a house style from scratch. The
@@ -7,7 +7,7 @@ current repo surfaces aligned with them.
 
 ## Product Lens
 
-Noteyard is not a generic AI app, a hosted SaaS, or a marketing-heavy
+NotesRecover is not a generic AI app, a hosted SaaS, or a marketing-heavy
 landing page. It is a copy-first forensic workbench with a public front door
 and a local review cockpit.
 

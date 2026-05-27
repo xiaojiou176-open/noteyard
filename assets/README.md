@@ -23,25 +23,25 @@ This directory stores tracked source assets for the GitHub-native storefront.
   - Source: derived from the same public-safe demo proof, plus the canonical
     one-line positioning
   - Update when: the README punchline or proof block changes
-- `brand/noteyard-mark.svg`
+- `brand/notes-recover-mark.svg`
   - Purpose: editable source for the Pages/site icon and small brand mark
   - Source: repo-owned vector artwork aligned with the landing-page palette
   - Update when: the landing-page palette or product mark changes
 - `brand/favicon-32.png`
   - Purpose: raster favicon export for browser tabs
-  - Source: exported from `brand/noteyard-mark.svg`
+  - Source: exported from `brand/notes-recover-mark.svg`
   - Update when: the SVG source changes
 - `brand/apple-touch-icon.png`
   - Purpose: iOS and Safari home-screen icon export
-  - Source: exported from `brand/noteyard-mark.svg`
+  - Source: exported from `brand/notes-recover-mark.svg`
   - Update when: the SVG source changes
 - `brand/icon-192.png`
   - Purpose: web app manifest icon export
-  - Source: exported from `brand/noteyard-mark.svg`
+  - Source: exported from `brand/notes-recover-mark.svg`
   - Update when: the SVG source changes
 - `brand/icon-512.png`
   - Purpose: high-resolution web app manifest icon export
-  - Source: exported from `brand/noteyard-mark.svg`
+  - Source: exported from `brand/notes-recover-mark.svg`
   - Update when: the SVG source changes
 
 ## Rules

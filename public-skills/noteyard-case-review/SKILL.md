@@ -1,6 +1,6 @@
 ---
-name: noteyard-case-review
-description: This skill should be used when the user asks to "review an Apple Notes case root", "set up Noteyard MCP", "run notes-recovery-mcp", "ask one bounded question about a case", or "compare two Noteyard case roots". It teaches install, first-success proof, and bounded case review without turning the repo into a hosted platform.
+name: notes-recover-case-review
+description: This skill should be used when the user asks to "review an Apple Notes case root", "set up NotesRecover MCP", "run notes-recovery-mcp", "ask one bounded question about a case", or "compare two NotesRecover case roots". It teaches install, first-success proof, and bounded case review without turning the repo into a hosted platform.
 triggers:
   - apple notes recovery
   - notes-recovery-mcp
@@ -9,7 +9,7 @@ triggers:
   - case-diff
 ---
 
-# Noteyard Case Review
+# NotesRecover Case Review
 
 Use this skill when an agent needs to install, wire, or operate the NoteStore
 Lab review flow on one explicit case root or the public-safe demo surface.
@@ -38,7 +38,7 @@ Lab review flow on one explicit case root or the public-safe demo surface.
 - Stay local, copy-first, and case-root-driven.
 - Prefer derived artifacts before raw copied evidence.
 - Do not treat the live Notes store as a target.
-- Do not describe Noteyard as a hosted or multi-tenant platform.
+- Do not describe NotesRecover as a hosted or multi-tenant platform.
 
 ## First-success flow
 
@@ -69,8 +69,8 @@ notes-recovery-mcp --case-dir ./output/Notes_Forensics_<run_ts>
 
 ## Example prompts
 
-- "Review this Noteyard case root and tell me which artifact to inspect first."
-- "Wire Noteyard MCP to `./output/Notes_Forensics_2026-04-08_...` and summarize the review-safe surfaces."
+- "Review this NotesRecover case root and tell me which artifact to inspect first."
+- "Wire NotesRecover MCP to `./output/Notes_Forensics_2026-04-08_...` and summarize the review-safe surfaces."
 - "Compare these two case roots and tell me what changed at the manifest/review layer."
 - "Generate a public-safe export plan for this case without exposing raw copied evidence."
 

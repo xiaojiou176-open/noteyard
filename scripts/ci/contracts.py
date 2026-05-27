@@ -14,7 +14,7 @@ ROOT_PUBLIC_CONTRACT_FILES = (
 )
 
 README_PUBLIC_SURFACE_TOKENS = (
-    "Noteyard",
+    "NotesRecover",
     "notes-recovery",
     "proof.html",
     "llms.txt",
@@ -111,7 +111,7 @@ RUNTIME_HYGIENE_TOKENS = (
 )
 
 README_TAG_RELEASE_URL = (
-    "https://github.com/xiaojiou176-open/noteyard/releases/tag/"
+    "https://github.com/xiaojiou176-open/notes-recover/releases/tag/"
 )
 
 PUBLIC_STORY_FORBIDDEN_CHANGELOG_TOKENS = (

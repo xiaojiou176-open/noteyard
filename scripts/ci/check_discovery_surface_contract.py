@@ -13,7 +13,7 @@ DISCOVERY_FILES = (
 )
 
 DISCOVERY_ASSET_FILES = (
-    "assets/brand/noteyard-mark.svg",
+    "assets/brand/notes-recover-mark.svg",
     "assets/brand/favicon-32.png",
     "assets/brand/apple-touch-icon.png",
     "assets/brand/icon-192.png",
@@ -21,7 +21,7 @@ DISCOVERY_ASSET_FILES = (
 )
 
 LLMS_REQUIRED_TOKENS = (
-    "Noteyard",
+    "NotesRecover",
     "notes-recovery",
     "notes-recovery-mcp",
     "Codex",
@@ -34,13 +34,13 @@ LLMS_REQUIRED_TOKENS = (
 ROBOTS_REQUIRED_TOKENS = (
     "User-agent: *",
     "Allow: /",
-    "Sitemap: https://xiaojiou176-open.github.io/noteyard/sitemap.xml",
+    "Sitemap: https://xiaojiou176-open.github.io/notes-recover/sitemap.xml",
 )
 
 SITEMAP_REQUIRED_TOKENS = (
-    "https://xiaojiou176-open.github.io/noteyard/",
-    "https://xiaojiou176-open.github.io/noteyard/llms.txt",
-    "https://xiaojiou176-open.github.io/noteyard/robots.txt",
+    "https://xiaojiou176-open.github.io/notes-recover/",
+    "https://xiaojiou176-open.github.io/notes-recover/llms.txt",
+    "https://xiaojiou176-open.github.io/notes-recover/robots.txt",
 )
 
 ERROR_PAGE_REQUIRED_TOKENS = (
@@ -51,10 +51,10 @@ ERROR_PAGE_REQUIRED_TOKENS = (
 )
 
 WEBMANIFEST_REQUIRED_TOKENS = (
-    '"name": "Noteyard"',
-    '"short_name": "Noteyard"',
-    '"start_url": "/noteyard/"',
-    '"scope": "/noteyard/"',
+    '"name": "NotesRecover"',
+    '"short_name": "NotesRecover"',
+    '"start_url": "/notes-recover/"',
+    '"scope": "/notes-recover/"',
     '"theme_color": "#16212b"',
     '"background_color": "#f5f1e8"',
     '"src": "assets/brand/icon-192.png"',
@@ -79,7 +79,7 @@ INTEGRATIONS_DISCOVERY_TOKENS = (
     "remote-connector-first hosts",
     ".codex/config.toml",
     ".mcp.json",
-    "[mcp_servers.noteyard]",
+    "[mcp_servers.notes-recover]",
     "../.venv/bin/python",
     'cwd = ".."',
     "\"mcpServers\"",

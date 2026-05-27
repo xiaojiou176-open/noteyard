@@ -67,11 +67,11 @@ Host notes:
 
 Public-ready host artifacts now shipped in-repo:
 
-- Codex plugin bundle: `plugins/noteyard-codex-plugin/`
-- Claude Code plugin bundle: `plugins/noteyard-claude-plugin/`
+- Codex plugin bundle: `plugins/notes-recover-codex-plugin/`
+- Claude Code plugin bundle: `plugins/notes-recover-claude-plugin/`
 - Claude marketplace manifest: `.claude-plugin/marketplace.json`
 - OpenClaw-compatible bundle build: `.venv/bin/python scripts/release/build_distribution_bundles.py --out-dir ./dist`
-- OpenHands/extensions-friendly public skill folder: `public-skills/noteyard-case-review/`
+- OpenHands/extensions-friendly public skill folder: `public-skills/notes-recover-case-review/`
 
 Fast host smoke checklist:
 
@@ -85,7 +85,7 @@ Minimal wrapper examples:
 Codex project `.codex/config.toml` example:
 
 ```toml
-[mcp_servers.noteyard]
+[mcp_servers.notes-recover]
 command = "../.venv/bin/python"
 args = [
   "-m",
@@ -101,7 +101,7 @@ Claude Code project `.mcp.json` example:
 ```json
 {
   "mcpServers": {
-    "noteyard": {
+    "notes-recover": {
       "command": ".venv/bin/python",
       "args": [
         "-m",
@@ -124,8 +124,8 @@ Keep these examples intentionally minimal:
 
 Tracked distribution artifacts:
 
-- `plugins/noteyard-codex-plugin/.codex-plugin/plugin.json`
-- `plugins/noteyard-claude-plugin/.claude-plugin/plugin.json`
+- `plugins/notes-recover-codex-plugin/.codex-plugin/plugin.json`
+- `plugins/notes-recover-claude-plugin/.claude-plugin/plugin.json`
 - `.claude-plugin/marketplace.json`
 - `server.json`
 
@@ -149,7 +149,7 @@ registry, or listing boundary.
 Current PyPI install path:
 
 ```bash
-python -m pip install noteyard==0.1.0.post1
+python -m pip install notes-recover==0.1.0.post1
 ```
 
 Repo-side metadata/build-readiness proof:
@@ -161,7 +161,7 @@ Repo-side metadata/build-readiness proof:
 OpenClaw-style install path:
 
 - Build the OpenClaw-compatible archive with `build_distribution_bundles.py`.
-- Install the local archive with `openclaw plugins install ./dist/noteyard-openclaw-bundle-v0.1.0.zip`.
+- Install the local archive with `openclaw plugins install ./dist/notes-recover-openclaw-bundle-v0.1.0.zip`.
 - A live ClawHub public-skill listing now exists for the secondary packet lane, but that does not turn this OpenClaw-compatible bundle into a live OpenClaw bundle listing.
 
 Current design intent:
@@ -175,11 +175,11 @@ Current design intent:
 
 | Surface | Status | Guidance |
 | --- | --- | --- |
-| Codex plugin bundle | shipped | use `plugins/noteyard-codex-plugin/` and a real local marketplace entry |
-| Claude Code marketplace-format starter | shipped | use `.claude-plugin/marketplace.json` plus `plugins/noteyard-claude-plugin/` without turning it into proof of an Anthropic-managed listing |
-| OpenClaw-compatible bundle | shipped | build the local archive from `plugins/noteyard-openclaw-bundle/`; the secondary ClawHub public-skill listing is live, but it does not prove a live OpenClaw bundle listing |
-| canonical independent skill surface | shipped | use `skills/noteyard-case-review/` as the canonical independent skill surface; plugin/starter skill files are host-specific derived copies |
-| OpenHands/extensions-friendly public skill folder | shipped | use `public-skills/noteyard-case-review/` when you need a standalone skill-folder packet for OpenHands/extensions or similar registries; today the same packet is live on ClawHub while the OpenHands thread remains changes-requested |
+| Codex plugin bundle | shipped | use `plugins/notes-recover-codex-plugin/` and a real local marketplace entry |
+| Claude Code marketplace-format starter | shipped | use `.claude-plugin/marketplace.json` plus `plugins/notes-recover-claude-plugin/` without turning it into proof of an Anthropic-managed listing |
+| OpenClaw-compatible bundle | shipped | build the local archive from `plugins/notes-recover-openclaw-bundle/`; the secondary ClawHub public-skill listing is live, but it does not prove a live OpenClaw bundle listing |
+| canonical independent skill surface | shipped | use `skills/notes-recover-case-review/` as the canonical independent skill surface; plugin/starter skill files are host-specific derived copies |
+| OpenHands/extensions-friendly public skill folder | shipped | use `public-skills/notes-recover-case-review/` when you need a standalone skill-folder packet for OpenHands/extensions or similar registries; today the same packet is live on ClawHub while the OpenHands thread remains changes-requested |
 | repo-owned host plugin | shipped as installable bundles | the shipped plugins are installable surfaces, but installability does not imply official listing |
 
 ## Container Later Surface
@@ -194,13 +194,13 @@ The truthful container story for this repository is:
 Canonical build:
 
 ```bash
-docker build -t noteyard:0.1.0.post1 .
+docker build -t notes-recover:0.1.0.post1 .
 ```
 
 Public-safe demo smoke:
 
 ```bash
-docker run --rm noteyard:0.1.0.post1 notes-recovery demo
+docker run --rm notes-recover:0.1.0.post1 notes-recovery demo
 ```
 
 Bounded MCP entrypoint:
@@ -209,12 +209,12 @@ Bounded MCP entrypoint:
 docker run --rm -i \
   -v "$PWD/output:/cases:ro" \
   --entrypoint notes-recovery-mcp \
-  noteyard:0.1.0.post1 \
+  notes-recover:0.1.0.post1 \
   --case-dir /cases/Notes_Forensics_<run_ts>
 ```
 
 The canonical image target for later validation is
-`ghcr.io/xiaojiou176-open/noteyard:0.1.0.post1`, with `latest`
+`ghcr.io/xiaojiou176-open/notes-recover:0.1.0.post1`, with `latest`
 as the optional convenience tag. Keep describing GHCR as an OCI/package surface, not as
 proof of a live Glama or Docker catalog listing.
 

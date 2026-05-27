@@ -1,4 +1,4 @@
-# Noteyard MCP Capabilities
+# NotesRecover MCP Capabilities
 
 This packet expects the local MCP surface to expose a bounded case-review lane.
 
