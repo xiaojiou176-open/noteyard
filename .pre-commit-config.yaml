@@ -1,0 +1,127 @@
+default_install_hook_types:
+  - pre-commit
+  - pre-push
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-yaml
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-added-large-files
+
+  - repo: local
+    hooks:
+      - id: gitleaks
+        name: gitleaks tracked-tree scan
+        entry: bash -lc 'gitleaks dir . --no-banner --redact --config .gitleaks.toml'
+        language: system
+        pass_filenames: false
+
+      - id: git-secrets
+        name: git-secrets recursive scan
+        entry: git-secrets --scan -r .
+        language: system
+        pass_filenames: false
+
+      - id: actionlint
+        name: actionlint workflow lint
+        entry: actionlint
+        language: system
+        pass_filenames: false
+
+      - id: commit-identity
+        name: commit identity gate
+        entry: python3 scripts/ci/check_commit_identity.py --mode all
+        language: system
+        pass_filenames: false
+
+      - id: repo-hygiene
+        name: repository hygiene gate
+        entry: python3 scripts/ci/check_repo_hygiene.py --mode hygiene
+        language: system
+        pass_filenames: false
+
+      - id: sensitive-surface
+        name: sensitive surface gate
+        entry: python3 scripts/ci/check_sensitive_surface.py
+        language: system
+        pass_filenames: false
+
+      - id: open-source-boundary
+        name: open source boundary gate
+        entry: python3 scripts/ci/check_repo_hygiene.py --mode open-source-boundary
+        language: system
+        pass_filenames: false
+
+      - id: public-story-truth
+        name: public story truth gate
+        entry: python3 scripts/ci/check_public_story_truth.py
+        language: system
+        pass_filenames: false
+
+      - id: runtime-hygiene
+        name: runtime hygiene gate
+        entry: python3 scripts/ci/check_runtime_hygiene.py
+        language: system
+        pass_filenames: false
+
+      - id: english-surface
+        name: english runtime surface gate
+        entry: python3 scripts/ci/check_english_surface.py
+        language: system
+        pass_filenames: false
+
+      - id: public-safe-outputs
+        name: public-safe output gate
+        entry: python3 scripts/ci/check_public_safe_outputs.py
+        language: system
+        pass_filenames: false
+
+      - id: host-safety
+        name: host safety contract gate
+        entry: python3 scripts/ci/check_host_safety_contract.py
+        language: system
+        pass_filenames: false
+
+      - id: baseline-smoke
+        name: baseline smoke pre-push gate
+        entry: >
+          bash -lc 'notes_cmd=.venv/bin/notes-recovery;
+          py_cmd=.venv/bin/python;
+          if [ -n "${pythonLocation:-}" ] && [ -x "$pythonLocation/bin/python" ]; then
+            py_cmd="$pythonLocation/bin/python";
+          fi &&
+          if [ ! -x "$notes_cmd" ]; then notes_cmd=notes-recovery; fi &&
+          if [ ! -x "$py_cmd" ]; then
+            if command -v python >/dev/null 2>&1; then py_cmd=python;
+            else py_cmd=python3; fi;
+          fi &&
+          "$notes_cmd" --help >/dev/null &&
+          tmp=$(mktemp) &&
+          "$notes_cmd" demo > "$tmp" &&
+          test -s "$tmp" &&
+          grep -q "Noteyard public demo" "$tmp" &&
+          "$py_cmd" -m pytest
+          tests/test_cli_entrypoints.py
+          tests/test_public_demo_command.py
+          tests/test_pipeline.py
+          tests/test_case_contract.py
+          tests/test_handlers_commands.py
+          tests/test_auto_run_full.py
+          tests/test_verify.py
+          -q'
+        language: system
+        pass_filenames: false
+        stages:
+          - pre-push
+
+      - id: commit-identity-push
+        name: commit identity pre-push gate
+        entry: python3 scripts/ci/check_commit_identity.py --mode all
+        language: system
+        pass_filenames: false
+        stages:
+          - pre-push

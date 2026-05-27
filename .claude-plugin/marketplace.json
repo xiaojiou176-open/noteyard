@@ -1,0 +1,25 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "noteyard-plugins",
+  "owner": {
+    "name": "Noteyard",
+    "email": "xiaojiou176@users.noreply.github.com"
+  },
+  "metadata": {
+    "description": "Git-backed Claude Code marketplace for the Noteyard public-ready plugin surface."
+  },
+  "plugins": [
+    {
+      "name": "noteyard-claude-plugin",
+      "description": "Bounded case-root MCP launcher for Noteyard review workflows.",
+      "version": "0.1.0.post1",
+      "author": {
+        "name": "Noteyard",
+        "email": "xiaojiou176@users.noreply.github.com"
+      },
+      "source": "./plugins/noteyard-claude-plugin",
+      "category": "developer-tools",
+      "strict": false
+    }
+  ]
+}

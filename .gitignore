@@ -1,0 +1,69 @@
+# Artifacts & samples
+# Baseline ignore rules
+# OS
+# Python cache
+# SQLite artifacts
+# Virtualenv
+
+# Local environment & secrets
+
+node_modules/
+dist/
+build/
+out/
+.next/
+.turbo/
+.cache/
+coverage/
+*.log
+data/
+tmp/
+artifacts/
+*.db
+*.pyc
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.coverage
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+.npmrc
+.pypirc
+credentials.json
+secrets.yml
+secrets.yaml
+.DS_Store
+.pytest_cache/
+.ruff_cache/
+.venv/
+__pycache__/
+uv.lock
+.agents/
+.agent/
+.codex/
+.claude/
+.cursor/
+.serena/
+.runtime-cache/
+cache/
+log/
+logs/
+!starter-bundles/codex/.codex/
+!starter-bundles/codex/.codex/config.toml
+!AGENTS.md
+!CLAUDE.md
+*.egg-info/
+# Reserved local-only example staging area. Keep it empty or formalize it
+# explicitly before promoting it into the tracked public repo surface.
+examples/
+output/
+!tests/data/
+!tests/data/README.md
+!tests/data/*.sqlite

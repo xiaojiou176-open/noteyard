@@ -1,0 +1,78 @@
+name: Bug report
+description: Report a reproducible problem in the CLI, dashboard, docs, or repository guardrails.
+title: "[Bug]: "
+labels:
+  - bug
+  - macos-only
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. Please include concrete reproduction steps and the exact command or surface that failed.
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Affected surface
+      description: Which part of the repository is involved?
+      options:
+        - CLI pipeline
+        - Dashboard
+        - Optional carve surface
+        - Docs / public surface
+        - CI / repository guardrails
+        - Safe demo artifacts
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the problem in plain language.
+      placeholder: The command failed, produced the wrong output, or the docs no longer match the runtime behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Provide the exact command sequence and inputs.
+      placeholder: |
+        1. Create a fresh virtual environment
+        2. Run `pip install -e .[dev]`
+        3. Run `notes-recovery ...`
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen instead?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include macOS version, Python version, and any optional extras you installed.
+      placeholder: "macOS 14.x, Python 3.11, installed extras: dev,dashboard"
+    validations:
+      required: true
+  - type: dropdown
+    id: public_surface
+    attributes:
+      label: Does this affect the public-safe evaluation path?
+      description: Choose the best match if the issue touches README, docs, demo artifacts, or release-facing materials.
+      options:
+        - No
+        - Yes, docs or README
+        - Yes, sanitized demo artifacts
+        - Unsure
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs or screenshots
+      description: Paste a short log excerpt or screenshot if it helps. Do not paste secrets or private evidence data.
+    validations:
+      required: false

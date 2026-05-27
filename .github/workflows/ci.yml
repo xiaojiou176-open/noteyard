@@ -1,0 +1,262 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 8 * * *"
+
+permissions:
+  actions: read
+  contents: read
+  security-events: read
+
+jobs:
+  baseline:
+    runs-on: macos-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -e .[dev]
+      - name: Baseline smoke
+        run: |
+          notes-recovery --help >/dev/null
+          notes-recovery demo | tee /tmp/noteyard-demo.txt
+          test -s /tmp/noteyard-demo.txt
+          grep -q "Noteyard public demo" /tmp/noteyard-demo.txt
+          python -m pytest \
+            tests/test_cli_entrypoints.py \
+            tests/test_public_demo_command.py \
+            tests/test_pipeline.py \
+            tests/test_case_contract.py \
+            tests/test_handlers_commands.py \
+            tests/test_auto_run_full.py \
+            tests/test_verify.py \
+            -q
+
+  deep-realism:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
+    runs-on: macos-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -e .[dev]
+      - name: Deep realism smoke
+        run: |
+          python -m pytest \
+            tests/test_realistic_flow_e2e.py \
+            tests/test_timeline_integration.py \
+            tests/test_spotlight_deep.py \
+            tests/test_fts_index_build.py \
+            -q
+
+  extras-ai-mcp:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: "3.11"
+      - name: Install AI and MCP dependencies
+        run: pip install -e '.[dev,ai,mcp]'
+      - name: AI + MCP smoke
+        run: |
+          python -m pytest \
+            tests/test_ai_review.py \
+            tests/test_ask_case.py \
+            tests/test_mcp_server.py \
+            -q
+
+  extras-dashboard:
+    runs-on: macos-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: "3.11"
+      - name: Install dashboard dependencies
+        run: pip install -e '.[dev,dashboard]'
+      - name: Dashboard smoke
+        run: |
+          python -m pytest \
+            tests/test_apps_entrypoints.py \
+            tests/test_dashboard_full.py \
+            -q
+
+  extras-carve-protobuf:
+    runs-on: macos-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: "3.11"
+      - name: Install carve dependencies
+        run: pip install -e '.[dev,carve]'
+      - name: Carve smoke
+        run: |
+          python -m pytest \
+            tests/test_carve.py \
+            -q
+
+  repo-hygiene:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: "3.11"
+      - name: Check workflow lint
+        uses: rhysd/actionlint@914e7df21a07ef503a81201c76d2b11c789d3fca
+      - name: Install TruffleHog
+        run: |
+          curl -fsSLo /tmp/trufflehog_3.94.2_linux_amd64.tar.gz \
+            https://github.com/trufflesecurity/trufflehog/releases/download/v3.94.2/trufflehog_3.94.2_linux_amd64.tar.gz
+          curl -fsSLo /tmp/trufflehog_3.94.2_checksums.txt \
+            https://github.com/trufflesecurity/trufflehog/releases/download/v3.94.2/trufflehog_3.94.2_checksums.txt
+          (
+            cd /tmp
+            grep ' trufflehog_3.94.2_linux_amd64.tar.gz$' trufflehog_3.94.2_checksums.txt | sha256sum --check --
+          )
+          tar -xzf /tmp/trufflehog_3.94.2_linux_amd64.tar.gz -C /tmp trufflehog
+          install /tmp/trufflehog /usr/local/bin/trufflehog
+      - name: Check TruffleHog history
+        run: |
+          trufflehog git "file://$PWD" \
+            --no-update \
+            --results=verified,unknown,unverified \
+            --fail
+      - name: Check GitHub Actions policy with zizmor
+        uses: zizmorcore/zizmor-action@71321a20a9ded102f6e9ce5718a2fcec2c4f70d8
+        with:
+          advanced-security: false
+      - name: Install Trivy
+        run: |
+          curl -fsSLo /tmp/trivy_0.69.3_Linux-64bit.tar.gz \
+            https://github.com/aquasecurity/trivy/releases/download/v0.69.3/trivy_0.69.3_Linux-64bit.tar.gz
+          curl -fsSLo /tmp/trivy_0.69.3_checksums.txt \
+            https://github.com/aquasecurity/trivy/releases/download/v0.69.3/trivy_0.69.3_checksums.txt
+          (
+            cd /tmp
+            grep ' trivy_0.69.3_Linux-64bit.tar.gz$' trivy_0.69.3_checksums.txt | sha256sum --check --
+          )
+          tar -xzf /tmp/trivy_0.69.3_Linux-64bit.tar.gz -C /tmp trivy
+          install /tmp/trivy /usr/local/bin/trivy
+      - name: Check Trivy filesystem and dependency scan
+        run: |
+          trivy fs \
+            --severity HIGH,CRITICAL \
+            --ignore-unfixed \
+            --exit-code 1 \
+            .
+      - name: Configure commit identity gate context
+        run: |
+          git config --local user.name "repo-guardrail"
+          git config --local user.email "repo-guardrail@users.noreply.github.com"
+      - name: Check docs surface
+        run: python scripts/ci/check_docs_surface.py
+      - name: Check verification contract
+        run: python scripts/ci/check_verification_contract.py
+      - name: Check runtime hygiene
+        run: python scripts/ci/check_runtime_hygiene.py
+      - name: Check optional surface contract
+        run: python scripts/ci/check_optional_surface_contract.py
+      - name: Check derived artifact retrieval contract
+        run: python scripts/ci/check_derived_artifact_retrieval_contract.py
+      - name: Check public story truth
+        run: python scripts/ci/check_public_story_truth.py
+      - name: Check discovery surface contract
+        run: python scripts/ci/check_discovery_surface_contract.py
+      - name: Check english runtime surface
+        run: python scripts/ci/check_english_surface.py
+      - name: Check public-safe output surface
+        run: python scripts/ci/check_public_safe_outputs.py
+      - name: Check host safety contract
+        run: python scripts/ci/check_host_safety_contract.py
+      - name: Check commit identity
+        run: python scripts/ci/check_commit_identity.py --mode all
+      - name: Check sensitive surface
+        run: python scripts/ci/check_sensitive_surface.py
+      - name: Check GitHub security alerts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NOTEYARD_ALLOW_SECRET_SCANNING_FALLBACK: "1"
+        run: python scripts/ci/check_github_security_alerts.py --repo xiaojiou176-open/noteyard
+      - name: Check repository hygiene
+        run: python scripts/ci/check_repo_hygiene.py --mode hygiene
+
+  local-guardrails:
+    runs-on: macos-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: "3.11"
+      - name: Install development dependencies
+        run: pip install -e .[dev]
+      - name: Install guardrail binaries
+        run: brew install gitleaks git-secrets actionlint
+      - name: Configure commit identity gate context
+        run: |
+          git config --local user.name "repo-guardrail"
+          git config --local user.email "repo-guardrail@users.noreply.github.com"
+      - name: Run pre-commit guardrails
+        run: pre-commit run --all-files
+      - name: Run pre-push guardrails
+        run: pre-commit run --all-files --hook-stage pre-push
+
+  open-source-boundary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: "3.11"
+      - name: Check open-source boundary
+        run: python scripts/ci/check_repo_hygiene.py --mode open-source-boundary
+
+  distribution-readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: "3.11"
+      - name: Install development dependencies
+        run: pip install -e .[dev]
+      - name: Check distribution metadata and build readiness
+        run: python scripts/release/check_pypi_publish_readiness.py

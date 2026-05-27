@@ -1,0 +1,8 @@
+# Single-maintainer ownership model.
+# Update this file before enabling multi-reviewer or team-based branch policies.
+
+* @xiaojiou176
+/.github/workflows/ @xiaojiou176
+/notes_recovery/ @xiaojiou176
+/tests/ @xiaojiou176
+/scripts/ @xiaojiou176

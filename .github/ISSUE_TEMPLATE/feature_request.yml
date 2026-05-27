@@ -1,0 +1,60 @@
+name: Feature request
+description: Suggest an improvement to the forensic workflow, docs, or repository guardrails.
+title: "[Feature]: "
+labels:
+  - enhancement
+  - public-surface
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the user problem first. That makes it easier to judge whether the request belongs in the baseline surface, an optional surface, or a separate tool.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: Explain the current pain point in plain language.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the workflow, command, or documentation change you want.
+    validations:
+      required: true
+  - type: dropdown
+    id: boundary
+    attributes:
+      label: Which boundary does this request touch?
+      description: Choose the closest scope.
+      options:
+        - Baseline CLI contract
+        - Optional dashboard/carve surface
+        - Docs / public surface / contributor workflow
+        - CI / release guardrails
+        - Safe demo artifacts or trust surface
+        - Unsure
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Note any workaround or alternative flow you tried.
+    validations:
+      required: false
+  - type: textarea
+    id: risks
+    attributes:
+      label: Evidence / compatibility notes
+      description: Mention any commands, docs, or runtime assumptions this change would affect.
+    validations:
+      required: false
+  - type: textarea
+    id: public_value
+    attributes:
+      label: Why would this make the public surface stronger?
+      description: If this affects README, docs, demo artifacts, release notes, or discoverability, explain the user-facing value.
+    validations:
+      required: false

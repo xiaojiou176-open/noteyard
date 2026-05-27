@@ -1,0 +1,21 @@
+title = "Noteyard Gitleaks Configuration"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Ignore local-only support surfaces that are outside the tracked public repo"
+paths = [
+  '''(^|/)\.agents/''',
+  '''(^|/)\.agent/''',
+  '''(^|/)\.codex/''',
+  '''(^|/)\.claude/''',
+  '''(^|/)\.venv/''',
+  '''(^|/)\.pytest_cache/''',
+  '''(^|/)\.runtime-cache/''',
+  '''(^|/)cache/''',
+  '''(^|/)logs/''',
+  '''(^|/)output/''',
+  '''(^|/)tests/__pycache__/''',
+  '''(^|/)scripts/ci/__pycache__/''',
+]
