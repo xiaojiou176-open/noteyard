@@ -1,9 +1,9 @@
-# Noteyard Case Review Public Skill
+# NotesRecover Case Review Public Skill
 
 This folder is the OpenHands/extensions-friendly and ClawHub-style public skill
-packet for Noteyard's secondary public lane.
+packet for NotesRecover's secondary public lane.
 
-The flagship story is still the local copy-first Noteyard workflow plus
+The flagship story is still the local copy-first NotesRecover workflow plus
 its explicit-case-root MCP surface. This packet exists so a host-native
 reviewer can learn that workflow without turning the repo into a hosted service
 or a plugin/store product pitch.
@@ -18,7 +18,7 @@ the OpenHands lane is already accepted or live.
 This is not just a label for Apple Notes. It teaches an agent five concrete
 things:
 
-1. how to install or launch the Noteyard MCP surface
+1. how to install or launch the NotesRecover MCP surface
 2. how to prove the review flow on public-safe demo artifacts first
 3. how to review one copied case root without touching the live Notes store
 4. how to ask bounded questions from derived artifacts instead of guessing
@@ -60,19 +60,19 @@ If a reviewer wants to understand the skill quickly, use this order:
 
 Primary reviewer route:
 
-- Landing: https://xiaojiou176-open.github.io/noteyard/
-- Public proof: https://xiaojiou176-open.github.io/noteyard/proof.html
-- Use cases: https://github.com/xiaojiou176-open/noteyard/blob/main/USE_CASES.md
+- Landing: https://xiaojiou176-open.github.io/notes-recover/
+- Public proof: https://xiaojiou176-open.github.io/notes-recover/proof.html
+- Use cases: https://github.com/xiaojiou176-open/notes-recover/blob/main/USE_CASES.md
 
 Builder / raw-source references after the route above:
 
-- Builder guide: https://github.com/xiaojiou176-open/noteyard/blob/main/INTEGRATIONS.md
-- Distribution boundary: https://github.com/xiaojiou176-open/noteyard/blob/main/DISTRIBUTION.md
-- Releases: https://github.com/xiaojiou176-open/noteyard/releases
+- Builder guide: https://github.com/xiaojiou176-open/notes-recover/blob/main/INTEGRATIONS.md
+- Distribution boundary: https://github.com/xiaojiou176-open/notes-recover/blob/main/DISTRIBUTION.md
+- Releases: https://github.com/xiaojiou176-open/notes-recover/releases
 
 ## Visual demo
 
-![Noteyard public demo surface](https://raw.githubusercontent.com/xiaojiou176-open/noteyard/main/assets/readme/hero-public-demo.png)
+![NotesRecover public demo surface](https://raw.githubusercontent.com/xiaojiou176-open/notes-recover/main/assets/readme/hero-public-demo.png)
 
 - Quick visual proof: the public demo already shows the bounded review flow on
   safe artifacts before a host ever points the MCP lane at a real copied case
@@ -110,7 +110,7 @@ Builder / raw-source references after the route above:
 
 The canonical skill text still lives at:
 
-- `skills/noteyard-case-review/SKILL.md`
+- `skills/notes-recover-case-review/SKILL.md`
 
 This folder is a public-facing derived packet. If the canonical skill changes,
 copy the updated `SKILL.md` here before publishing.

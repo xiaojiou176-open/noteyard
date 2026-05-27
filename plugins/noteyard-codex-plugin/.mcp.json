@@ -1,7 +1,7 @@
 {
   "mcpServers": {
-    "noteyard": {
-      "command": "./bin/noteyard-mcp"
+    "notes-recover": {
+      "command": "./bin/notes-recover-mcp"
     }
   }
 }

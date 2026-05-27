@@ -1,11 +1,11 @@
 {
   "mcpServers": {
-    "noteyard": {
-      "command": "./bin/noteyard-mcp",
+    "notes-recover": {
+      "command": "./bin/notes-recover-mcp",
       "env": {
-        "NOTEYARD_REPO_ROOT": "${NOTEYARD_REPO_ROOT}",
-        "NOTEYARD_CASE_DIR": "${NOTEYARD_CASE_DIR}",
-        "NOTEYARD_PYTHON": "${NOTEYARD_PYTHON}"
+        "NOTES_RECOVER_REPO_ROOT": "${NOTES_RECOVER_REPO_ROOT}",
+        "NOTES_RECOVER_CASE_DIR": "${NOTES_RECOVER_CASE_DIR}",
+        "NOTES_RECOVER_PYTHON": "${NOTES_RECOVER_PYTHON}"
       }
     }
   }

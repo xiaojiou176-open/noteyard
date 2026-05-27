@@ -1,11 +1,11 @@
 ---
-name: noteyard-case-review
-description: Guide one bounded Noteyard case review without turning the repo into a hosted platform.
+name: notes-recover-case-review
+description: Guide one bounded NotesRecover case review without turning the repo into a hosted platform.
 ---
 
-# Noteyard Case Review
+# NotesRecover Case Review
 
-Use this skill when an agent is reviewing one Noteyard case root or the
+Use this skill when an agent is reviewing one NotesRecover case root or the
 public-safe demo surface.
 
 ## Product truth

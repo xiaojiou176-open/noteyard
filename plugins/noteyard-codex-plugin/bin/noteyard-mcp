@@ -1,17 +1,17 @@
 #!/bin/sh
 set -eu
 
-repo_root="${NOTEYARD_REPO_ROOT:-}"
-case_dir="${NOTEYARD_CASE_DIR:-}"
-python_bin="${NOTEYARD_PYTHON:-}"
+repo_root="${NOTES_RECOVER_REPO_ROOT:-}"
+case_dir="${NOTES_RECOVER_CASE_DIR:-}"
+python_bin="${NOTES_RECOVER_PYTHON:-}"
 
 if [ -z "$repo_root" ]; then
-  echo "NOTEYARD_REPO_ROOT is required." >&2
+  echo "NOTES_RECOVER_REPO_ROOT is required." >&2
   exit 1
 fi
 
 if [ -z "$case_dir" ]; then
-  echo "NOTEYARD_CASE_DIR is required." >&2
+  echo "NOTES_RECOVER_CASE_DIR is required." >&2
   exit 1
 fi
 

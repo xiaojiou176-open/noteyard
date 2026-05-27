@@ -1,4 +1,4 @@
-title = "Noteyard Gitleaks Configuration"
+title = "NotesRecover Gitleaks Configuration"
 
 [extend]
 useDefault = true

@@ -1,4 +1,4 @@
-# Noteyard Skill References
+# NotesRecover Skill References
 
 This directory keeps the practical material that a reviewer or agent needs
 without depending on repo-root docs.

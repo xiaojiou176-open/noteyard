@@ -105,7 +105,7 @@ def main() -> int:
     repo_root = Path(__file__).resolve().parents[2]
     allow_secret_scanning_fallback = (
         args.allow_secret_scanning_fallback
-        or os.environ.get("NOTEYARD_ALLOW_SECRET_SCANNING_FALLBACK") == "1"
+        or os.environ.get("NOTES_RECOVER_ALLOW_SECRET_SCANNING_FALLBACK") == "1"
         or bool(os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN"))
     )
     errors = collect_github_security_alert_errors(

@@ -46,7 +46,7 @@ from notes_recovery.services.verify import verify_hits
 
 MCP_DEPENDENCY_HELP = (
     "The MCP server requires the optional MCP dependencies. "
-    "Install `python -m pip install 'noteyard[mcp]'` "
+    "Install `python -m pip install 'notes-recover[mcp]'` "
     "or `python -m pip install -e .[mcp]` first."
 )
 
@@ -275,7 +275,7 @@ def build_mcp_server(
     registry = CaseRegistry.build(case_dirs, cases_roots)
     retrieval_contract = derived_artifact_retrieval_contract()
     server = FastMCP(
-        "Noteyard MCP",
+        "NotesRecover MCP",
         instructions=(
             "Read-mostly MCP server for copy-first Apple Notes recovery cases. "
             "Stay on derived review artifacts and bounded derived-output tools."

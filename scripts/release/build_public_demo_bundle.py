@@ -30,7 +30,7 @@ def build_bundle(output_path: Path) -> Path:
             "README.md",
             "\n".join(
                 [
-                    "# Noteyard Public-Safe Demo Bundle",
+                    "# NotesRecover Public-Safe Demo Bundle",
                     "",
                     "This bundle contains tracked synthetic demo artifacts for the public-safe first-look path.",
                     "",

@@ -13,7 +13,7 @@ def test_load_direct_dependency_scopes_marks_runtime_and_dev_groups(tmp_path: Pa
         "\n".join(
             [
                 "[project]",
-                'name = "noteyard"',
+                'name = "notes-recover"',
                 'dependencies = ["httpx>=0.28.1"]',
                 "",
                 "[project.optional-dependencies]",
@@ -41,7 +41,7 @@ def test_build_snapshot_marks_direct_and_indirect_packages(monkeypatch) -> None:
 
     snapshot = snapshot_gate.build_snapshot(
         repo_slug="owner/repo",
-        project_name="noteyard",
+        project_name="notes-recover",
         packages=[
             InstalledPackage(name="httpx", version="0.28.1"),
             InstalledPackage(name="idna", version="3.11"),

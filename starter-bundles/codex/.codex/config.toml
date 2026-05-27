@@ -1,4 +1,4 @@
-[mcp_servers.noteyard]
+[mcp_servers.notes-recover]
 command = "../.venv/bin/python"
 args = [
   "-m",

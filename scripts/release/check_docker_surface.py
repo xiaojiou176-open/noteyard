@@ -9,9 +9,9 @@ import tomllib
 from pathlib import Path
 
 
-REPO_URL = "https://github.com/xiaojiou176-open/noteyard"
-SERVER_NAME = "io.github.xiaojiou176-open/noteyard-mcp"
-IMAGE_BASE = "ghcr.io/xiaojiou176-open/noteyard"
+REPO_URL = "https://github.com/xiaojiou176-open/notes-recover"
+SERVER_NAME = "io.github.xiaojiou176-open/notes-recover-mcp"
+IMAGE_BASE = "ghcr.io/xiaojiou176-open/notes-recover"
 
 
 def _run(args: list[str], *, cwd: Path) -> subprocess.CompletedProcess[str]:
@@ -32,7 +32,7 @@ def _project_version(repo_root: Path) -> str:
 def collect_docker_surface_errors(repo_root: Path) -> list[str]:
     errors: list[str] = []
     project_version = _project_version(repo_root)
-    local_image_tag = f"noteyard:{project_version}"
+    local_image_tag = f"notes-recover:{project_version}"
 
     dockerfile = repo_root / "Dockerfile"
     dockerignore = repo_root / ".dockerignore"
@@ -78,8 +78,8 @@ def build_and_smoke(repo_root: Path) -> dict[str, object]:
     if shutil.which("docker") is None:
         return {"ok": False, "errors": ["docker is not installed"]}  # pragma: no cover
 
-    with tempfile.TemporaryDirectory(prefix="noteyard-docker-smoke-"):
-        image_tag = f"noteyard-smoke:{Path(repo_root).name}"
+    with tempfile.TemporaryDirectory(prefix="notes-recover-docker-smoke-"):
+        image_tag = f"notes-recover-smoke:{Path(repo_root).name}"
         build_result = _run(["docker", "build", "-t", image_tag, "."], cwd=repo_root)
         if build_result.returncode != 0:
             return {

@@ -1,9 +1,9 @@
 {
-  "name": "Noteyard",
-  "short_name": "Noteyard",
+  "name": "NotesRecover",
+  "short_name": "NotesRecover",
   "description": "Copy-first Apple Notes recovery and review toolkit for macOS.",
-  "start_url": "/noteyard/",
-  "scope": "/noteyard/",
+  "start_url": "/notes-recover/",
+  "scope": "/notes-recover/",
   "display": "standalone",
   "background_color": "#f5f1e8",
   "theme_color": "#16212b",

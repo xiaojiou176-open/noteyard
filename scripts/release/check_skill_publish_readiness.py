@@ -16,17 +16,17 @@ if Path(__file__).resolve().suffix == ".py":
         import tomli as tomllib  # type: ignore
 
 
-CANONICAL_SKILL_DIR = Path("skills/noteyard-case-review")
+CANONICAL_SKILL_DIR = Path("skills/notes-recover-case-review")
 DERIVED_SKILL_PATHS = (
-    Path("plugins/noteyard-codex-plugin/skills/noteyard-case-review/SKILL.md"),
-    Path("starter-bundles/codex/plugins/noteyard/skills/noteyard-mcp/SKILL.md"),
-    Path("starter-bundles/claude-code/plugins/noteyard/skills/noteyard-mcp/SKILL.md"),
-    Path("plugins/noteyard-openclaw-bundle/workspace/skills/noteyard/SKILL.md"),
-    Path("starter-bundles/openclaw/workspace/skills/noteyard/SKILL.md"),
+    Path("plugins/notes-recover-codex-plugin/skills/notes-recover-case-review/SKILL.md"),
+    Path("starter-bundles/codex/plugins/notes-recover/skills/notes-recover-mcp/SKILL.md"),
+    Path("starter-bundles/claude-code/plugins/notes-recover/skills/notes-recover-mcp/SKILL.md"),
+    Path("plugins/notes-recover-openclaw-bundle/workspace/skills/notes-recover/SKILL.md"),
+    Path("starter-bundles/openclaw/workspace/skills/notes-recover/SKILL.md"),
 )
-REPO_URL = "https://github.com/xiaojiou176-open/noteyard"
-CANONICAL_NAME = "noteyard-case-review"
-PUBLIC_SKILL_DIR = Path("public-skills/noteyard-case-review")
+REPO_URL = "https://github.com/xiaojiou176-open/notes-recover"
+CANONICAL_NAME = "notes-recover-case-review"
+PUBLIC_SKILL_DIR = Path("public-skills/notes-recover-case-review")
 PUBLIC_SKILL_SEMVER = "1.0.2"
 LEGACY_PUBLIC_REFERENCE_FILES = (
     PUBLIC_SKILL_DIR / "references" / "install-and-mcp.md",
@@ -85,7 +85,7 @@ def collect_skill_publish_errors(repo_root: Path) -> list[str]:
     canonical_text = canonical_skill.read_text(encoding="utf-8")
     frontmatter = _frontmatter(canonical_text)
     if frontmatter.get("name") != CANONICAL_NAME:
-        errors.append("canonical SKILL.md frontmatter name must stay noteyard-case-review")
+        errors.append("canonical SKILL.md frontmatter name must stay notes-recover-case-review")
     if not frontmatter.get("description"):
         errors.append("canonical SKILL.md frontmatter is missing description")
 
@@ -115,7 +115,7 @@ def collect_skill_publish_errors(repo_root: Path) -> list[str]:
             errors.append(f"manifest.yaml is missing required field: {key}")
 
     if _manifest_scalar(manifest_text, "name") != CANONICAL_NAME:
-        errors.append("manifest.yaml name must stay noteyard-case-review")
+        errors.append("manifest.yaml name must stay notes-recover-case-review")
 
     pyproject = _load_pyproject(repo_root)
     project = pyproject.get("project")
@@ -152,22 +152,22 @@ def collect_skill_publish_errors(repo_root: Path) -> list[str]:
         for token in (
             "schema_version: 1",
             "artifact: public-skill-listing-manifest",
-            "name: noteyard-case-review",
+            "name: notes-recover-case-review",
             "version: 1.0.2",
-            "display_name: Noteyard Case Review",
+            "display_name: NotesRecover Case Review",
             "package_shape: skill-folder",
             "clawhub:",
             "openhands-extensions:",
             "status: listed-live",
-            "live_read_back: https://clawhub.ai/xiaojiou176/noteyard-case-review",
+            "live_read_back: https://clawhub.ai/xiaojiou176/notes-recover-case-review",
             "status: submission-done-platform-not-accepted-yet",
             "review_state: changes-requested",
             "submit_via: clawhub publish .",
-            "submit_via: submit this folder as skills/noteyard-case-review/ in OpenHands/extensions",
+            "submit_via: submit this folder as skills/notes-recover-case-review/ in OpenHands/extensions",
             "canonical_repo_version: 0.1.0.post1",
             "official_listing_state: clawhub-listed-live-openhands-submission-done",
             "confirmed_live:",
-            "ClawHub public skill listing is live at https://clawhub.ai/xiaojiou176/noteyard-case-review",
+            "ClawHub public skill listing is live at https://clawhub.ai/xiaojiou176/notes-recover-case-review",
             "references/README.md",
             "references/INSTALL.md",
             "references/OPENHANDS_MCP_CONFIG.json",
@@ -183,13 +183,13 @@ def collect_skill_publish_errors(repo_root: Path) -> list[str]:
         for token in (
             "OpenHands/extensions-friendly",
             "ClawHub-style",
-            "skills/noteyard-case-review/SKILL.md",
+            "skills/notes-recover-case-review/SKILL.md",
             "no official OpenHands/extensions listing without fresh PR/read-back",
             "Today the secondary ClawHub packet listing is live",
             "OpenHands/extensions submission still sits in a changes-requested review state",
             "What this skill teaches an agent",
             "Primary reviewer route:",
-            "Use cases: https://github.com/xiaojiou176-open/noteyard/blob/main/USE_CASES.md",
+            "Use cases: https://github.com/xiaojiou176-open/notes-recover/blob/main/USE_CASES.md",
             "Builder / raw-source references after the route above:",
             "Demo / proof links",
         ):
@@ -204,16 +204,16 @@ def collect_skill_publish_errors(repo_root: Path) -> list[str]:
         public_demo_text = public_skill_demo.read_text(encoding="utf-8")
         for token in (
             "Primary reviewer route:",
-            "Landing page: https://xiaojiou176-open.github.io/noteyard/",
-            "Public proof page: https://xiaojiou176-open.github.io/noteyard/proof.html",
-            "Use cases: https://github.com/xiaojiou176-open/noteyard/blob/main/USE_CASES.md",
+            "Landing page: https://xiaojiou176-open.github.io/notes-recover/",
+            "Public proof page: https://xiaojiou176-open.github.io/notes-recover/proof.html",
+            "Use cases: https://github.com/xiaojiou176-open/notes-recover/blob/main/USE_CASES.md",
             "Builder / raw-source references after the route above:",
             "the secondary ClawHub packet listing is live",
             "submission-done plus changes-requested",
         ):
             if token not in public_demo_text:
                 errors.append(f"public skill demo reference is missing required token: {token}")
-        if "https://github.com/xiaojiou176-open/noteyard/blob/main/proof.html" in public_demo_text:
+        if "https://github.com/xiaojiou176-open/notes-recover/blob/main/proof.html" in public_demo_text:
             errors.append(
                 "public skill demo reference still points first-hop proof at a blob page"
             )
@@ -237,7 +237,7 @@ def collect_skill_publish_errors(repo_root: Path) -> list[str]:
             errors.append(f"legacy public skill reference should be removed: {legacy_ref}")
 
     codex_plugin_payload = _load_json(
-        repo_root / "plugins/noteyard-codex-plugin/.codex-plugin/plugin.json"
+        repo_root / "plugins/notes-recover-codex-plugin/.codex-plugin/plugin.json"
     )
     if codex_plugin_payload.get("version") != version:
         errors.append("Codex plugin version must match pyproject.toml project.version")
@@ -263,9 +263,9 @@ def collect_skill_publish_errors(repo_root: Path) -> list[str]:
     contributing_text = (repo_root / "CONTRIBUTING.md").read_text(encoding="utf-8")
     llms_text = (repo_root / "llms.txt").read_text(encoding="utf-8")
     ecosystem_text = (repo_root / "ECOSYSTEM.md").read_text(encoding="utf-8")
-    if "skills/noteyard-case-review/" not in readme_text:
+    if "skills/notes-recover-case-review/" not in readme_text:
         errors.append("README.md must mention the canonical independent skill surface")
-    if "public-skills/noteyard-case-review/" not in readme_text:
+    if "public-skills/notes-recover-case-review/" not in readme_text:
         errors.append("README.md must mention the OpenHands/ClawHub-facing public skill folder")
     if "independent skill surface" not in distribution_text:
         errors.append("DISTRIBUTION.md must describe the independent skill surface truthfully")

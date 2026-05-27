@@ -299,7 +299,7 @@ def run_doctor() -> dict[str, Any]:
 
 def render_doctor_report(payload: dict[str, Any]) -> str:
     lines = [
-        "Noteyard doctor",
+        "NotesRecover doctor",
         "",
         f"Overall status: {payload['overall_status']}",
         "",

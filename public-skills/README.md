@@ -1,4 +1,4 @@
-# Noteyard Public Skill Pack
+# NotesRecover Public Skill Pack
 
 These files are the public-safe subset of the repo's skill distribution story.
 
@@ -21,11 +21,11 @@ What this pack is not:
 
 Current public-safe contents:
 
-- `noteyard-case-review/`
+- `notes-recover-case-review/`
   - OpenHands/extensions-friendly public skill folder
   - ClawHub-style manifest with semver-ready listing metadata
   - today the secondary ClawHub public-skill listing is already live
-  - one derived copy of the canonical `skills/noteyard-case-review/SKILL.md`
+  - one derived copy of the canonical `skills/notes-recover-case-review/SKILL.md`
 
 Public-safe inclusion test:
 

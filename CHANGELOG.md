@@ -18,8 +18,8 @@ the public repository surface stays readable for users evaluating the project.
 - `notes-recovery plugins-validate` for plugin contract validation
 - `notes-recovery case-diff` for bounded cross-run / cross-case manifest and review-surface comparison
 - `server.json` and the README MCP marker for MCP Registry-ready metadata
-- a Codex plugin bundle under `plugins/noteyard-codex-plugin/`
-- a Claude Code plugin bundle under `plugins/noteyard-claude-plugin/`
+- a Codex plugin bundle under `plugins/notes-recover-codex-plugin/`
+- a Claude Code plugin bundle under `plugins/notes-recover-claude-plugin/`
 - a Git-backed Claude Code marketplace manifest at `.claude-plugin/marketplace.json`
 - `scripts/release/build_distribution_bundles.py` for packaging Codex, Claude Code, and OpenClaw-compatible bundles
 - `scripts/release/check_pypi_publish_readiness.py` for MCP/PyPI package-alignment, build, and `twine check` verification before external publishing
@@ -61,7 +61,7 @@ the public repository surface stays readable for users evaluating the project.
 ### Notes
 
 - GitHub Release `v0.1.0` is now published on the repository Releases page
-- Release `v0.1.0` now includes the `noteyard-public-safe-demo-v0.1.0.zip`
+- Release `v0.1.0` now includes the `notes-recover-public-safe-demo-v0.1.0.zip`
   synthetic public demo bundle
 - The GitHub Pages landing now acts as the minimal live front door for the
   current shipped story
@@ -83,7 +83,7 @@ the public repository surface stays readable for users evaluating the project.
 
 ### Changed
 
-- The repository front door now presents Noteyard as a CLI-first,
+- The repository front door now presents NotesRecover as a CLI-first,
   copy-first Apple Notes recovery workflow instead of a policy-heavy project
   index
 - Public links now separate conversion surfaces (README) from deeper contract

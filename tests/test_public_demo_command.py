@@ -34,7 +34,7 @@ def test_demo_command_prints_public_surface(tmp_path, capsys) -> None:
 
     captured = capsys.readouterr()
     assert exit_code == 0
-    assert "Noteyard public demo" in captured.out
+    assert "NotesRecover public demo" in captured.out
     assert "sanitized-case-tree.txt" in captured.out
     assert "Verification summary" in captured.out
     assert "AI triage preview" in captured.out

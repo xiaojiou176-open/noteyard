@@ -3,7 +3,7 @@ requires = ["setuptools>=82.0.1", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "noteyard"
+name = "notes-recover"
 version = "0.1.0.post1"
 description = "Copy-first Apple Notes recovery toolkit for macOS, with reviewable case outputs, AI-assisted review, verification, and public-safe demo artifacts."
 readme = "README.md"
@@ -20,10 +20,10 @@ protobuf = []
 dev = ["pytest", "pre-commit", "setuptools>=82.0.1", "build", "twine"]
 
 [project.urls]
-Documentation = "https://github.com/xiaojiou176-open/noteyard"
-Releases = "https://github.com/xiaojiou176-open/noteyard/releases"
-Support = "https://github.com/xiaojiou176-open/noteyard/blob/main/SUPPORT.md"
-Issues = "https://github.com/xiaojiou176-open/noteyard/issues"
+Documentation = "https://github.com/xiaojiou176-open/notes-recover"
+Releases = "https://github.com/xiaojiou176-open/notes-recover/releases"
+Support = "https://github.com/xiaojiou176-open/notes-recover/blob/main/SUPPORT.md"
+Issues = "https://github.com/xiaojiou176-open/notes-recover/issues"
 
 [project.scripts]
 notes-recovery = "notes_recovery.cli.main:main"

@@ -649,10 +649,10 @@ def run_dashboard() -> None:
     except Exception:
         px = None
         plotly_graph_objects = None
-    st.set_page_config(page_title="Noteyard review cockpit", layout="wide")
+    st.set_page_config(page_title="NotesRecover review cockpit", layout="wide")
     inject_dashboard_theme()
 
-    st.title("Noteyard review cockpit")
+    st.title("NotesRecover review cockpit")
 
     with st.sidebar:
         st.header("Data source")
